@@ -124,7 +124,6 @@ $count_weight = 0;
                                       <span class='paragraph-box green margin-paragraph-container'><?php echo date('d-m-Y', strtotime($weight_date)) ?></span>
                                   </div>
                               </div>
-
                           <?php $count_weight  = $count_weight + 1; } ?>
                   </div>
               </div>

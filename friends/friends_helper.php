@@ -60,10 +60,50 @@ function addUserMessage($link, $user_id, $created_by, $content) {
     mysqli_query($link,"INSERT INTO friends_post (user_id, created_by, content) VALUES ('$user_id', '$created_by', '$content') ");
 }
 
+function CountFollowing($link, $user_id) {
+    $following = mysqli_query($link,"SELECT `follower_id` FROM friends_follow WHERE follower_id='$user_id'");
+    $following_people = mysqli_num_rows($following);
+    return $following_people;
+}
+
+function CountFollowers($link, $user_id) {
+    $following = mysqli_query($link,"SELECT `followed_user_id` FROM friends_follow WHERE followed_user_id='$user_id'");
+    $following_people = mysqli_num_rows($following);
+    return $following_people;
+}
+
 function getUsernameById($link, $user_id) {
     $user = mysqli_query($link,"SELECT * FROM users WHERE id='$user_id'");
     $user_data = mysqli_fetch_assoc($user);
     return $user_data['name'];
+}
+
+function getUserGenderById($link, $user_id) {
+    $user = mysqli_query($link,"SELECT * FROM users WHERE id='$user_id'");
+    $user_data = mysqli_fetch_assoc($user);
+    return $user_data['gender'];
+}
+
+function getUserHeightById($link, $user_id) {
+    $height = mysqli_query($link,"SELECT * FROM users WHERE id='$user_id'");
+    $height_data = mysqli_fetch_assoc($height);
+    return $height_data['height'];
+}
+
+function getUserPhotoById($link, $user_id) {
+    $photo = $link->query("SELECT * FROM profile_img  WHERE id='$user_id' ORDER BY `date` DESC LIMIT 1");
+    if($photo->num_rows > 0){
+            while($row = $photo->fetch_assoc()){
+                return $row['img_data'];
+            }} elseif (getUserGenderById($link,$_COOKIE['selected_user_id']) == 'm'){
+                $male ="../img/profile_img/default_male.jpeg";
+                $male_image = file_get_contents($male);
+                return $male_image;
+            } elseif (getUserGenderById($link,$_COOKIE['selected_user_id']) == 'f') {
+                $female = "../img/profile_img/default_female.jpeg";
+                $female_image = file_get_contents($female);
+                return $female_image;
+    }
 }
 
 if (isset($_POST["follow"])) {
@@ -95,5 +135,6 @@ if (isset($_POST["back_to_me"])) {
     setcookie('selected_user',  $data['name']);
     header('location:.'); // redirect
 }
+
 
 ?>
