@@ -61,7 +61,7 @@ $count_weight = 0;
       </h3>
     </div>
     <div class="flex-row margin-right">
-    <a class="nav-link-style nav-link " href="../profile">
+    <a class="nav-link-style nav-link " href="../home">
        Home
 </a>
 <a class="nav-link-style nav-link " href="../profile">
@@ -73,8 +73,6 @@ $count_weight = 0;
             <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
               <div class="center"> </div>
               <li><a class="dropdown-item" href="../preferences">Preferences</a></li>
-              <hr class="borderline">
-              <li><a class="dropdown-item" href="../friends">Friends</a></li>
               <hr class="borderline">
               <li><a class="dropdown-item" href="../end_session.php">Sign Out</a></li>
             </ul>

@@ -4,8 +4,7 @@ session_start();
 
 // if the user is already logged in then redirect user to home
 if (isset($_SESSION['user'])) {
-    header('location: profile');
-    // TODO CHANGE TO HOME PAGE
+    header('location: home');
     exit();
 }
 ?>

@@ -44,21 +44,19 @@ $id = $data['id'];
             </h3>
         </div>
         <div class="flex-row margin-right">
-            <a class="nav-link-style nav-link " href="../profile">
+            <a class="nav-link-style nav-link nav-desktop" href="../home">
                 Home
-            </a>
-            <a class="nav-link-style nav-link " href="../profile">
-                Profile
-            </a>
-            <a class="nav-link-style nav-link " href="../activity">
-                Activity
             </a>
             <div class="dropdown">
                 <button class="btn" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false"><img class="menu-img" src="../img/navbar/menu.svg" alt="">
                 </button>
                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                     <div class="center"> </div>
-                    <li><a class="dropdown-item" href="../friends">Friends</a></li>
+                    <li><a class="dropdown-item mobile-menu" href="../home">Home</a></li>
+                    <hr class="borderline mobile-menu">
+                    <li><a class="dropdown-item" href="../profile">Profile</a></li>
+                    <hr class="borderline">
+                    <li><a class="dropdown-item" href="../activity">Activity</a></li>
                     <hr class="borderline">
                     <li><a class="dropdown-item" href="../end_session.php">Sign Out</a></li>
                 </ul>

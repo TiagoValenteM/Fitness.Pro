@@ -8,6 +8,8 @@ $data = getLoggedUserData($link);
 $id = $data['id'];
 
 if (!isset($_COOKIE['selected_user_id']) || !isset($_COOKIE['selected_user'])) {
+    $_COOKIE['selected_user_id'] = $id;
+    $_COOKIE['selected_user'] = $data['name'];
     setcookie('selected_user_id', $id);
     setcookie('selected_user',  $data['name']);
 }
@@ -56,8 +58,18 @@ function getUserMessages($link, $user_id) {
     return array_reverse($user_messages_arr);
 }
 
+function getUsernameWhoSentMessage($link, $user_id) {
+    $username = mysqli_query($link,"SELECT * FROM users WHERE id='$user_id'");
+    $user_data = mysqli_fetch_assoc($username);
+    return $user_data['name'];
+}
+
 function addUserMessage($link, $user_id, $created_by, $content) {
     mysqli_query($link,"INSERT INTO friends_post (user_id, created_by, content) VALUES ('$user_id', '$created_by', '$content') ");
+}
+
+function addLike($link, $post_id) {
+    mysqli_query($link,"UPDATE friends_post SET like_count = like_count + 1 WHERE post_id='$post_id'");
 }
 
 function CountFollowing($link, $user_id) {
@@ -95,11 +107,11 @@ function getUserPhotoById($link, $user_id) {
     if($photo->num_rows > 0){
             while($row = $photo->fetch_assoc()){
                 return $row['img_data'];
-            }} elseif (getUserGenderById($link,$_COOKIE['selected_user_id']) == 'm'){
+            }} elseif (getUserGenderById($link,$user_id) == 'm'){
                 $male ="../img/profile_img/default_male.jpeg";
                 $male_image = file_get_contents($male);
                 return $male_image;
-            } elseif (getUserGenderById($link,$_COOKIE['selected_user_id']) == 'f') {
+            } elseif (getUserGenderById($link,$user_id) == 'f') {
                 $female = "../img/profile_img/default_female.jpeg";
                 $female_image = file_get_contents($female);
                 return $female_image;
@@ -121,6 +133,11 @@ if (isset($_POST["add-message"]) && isset($_COOKIE['selected_user_id'])) {
     addUserMessage($link, $selected_user, $id, $message_content);
 }
 
+if (isset($_POST["like"])) {
+    $post_id = $_REQUEST["post_to_like"];
+    addLike($link, $post_id);
+}
+
 if (isset($_POST["select_user"])) {
     $selected_user_id = mysqli_escape_string($link, $_REQUEST["select_user"]);
     setcookie("selected_user_id", "", time() - 3600);
@@ -137,4 +154,3 @@ if (isset($_POST["back_to_me"])) {
 }
 
 
-?>

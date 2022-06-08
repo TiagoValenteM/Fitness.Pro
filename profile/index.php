@@ -11,9 +11,7 @@ include("../scripts/workout_add.php");
 include("../scripts/activity_display.php");
 
 // getting data from the user that is logged in
-$user = mysqli_real_escape_string($link, $_SESSION['user']);
-    $result = mysqli_query($link,"SELECT * FROM users WHERE email='$user'");
-    $data = mysqli_fetch_assoc($result);
+$data = getLoggedUserData($link);
 $id = $data['id'];
 
 // getting image from database
@@ -56,7 +54,7 @@ $count_user = 0;
       </h3>
     </div>
     <div class="flex-row margin-right">
-    <a class="nav-link-style nav-link nav-desktop" href="../profile">
+    <a class="nav-link-style nav-link nav-desktop" href="../home">
        Home
     </a>
     <a class="nav-link-style nav-link nav-desktop" href="../activity">
@@ -67,13 +65,11 @@ $count_user = 0;
         </button>
             <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                 <div class="center"> </div>
-                    <li><a class="dropdown-item mobile-menu" href="../profile">Home</a></li>
+                    <li><a class="dropdown-item mobile-menu" href="../home">Home</a></li>
                     <hr class="borderline mobile-menu">
                     <li><a class="dropdown-item mobile-menu" href="../activity">Activity</a></li>
                     <hr class="borderline mobile-menu">
                     <li><a class="dropdown-item" href="../preferences">Preferences</a></li>
-                    <hr class="borderline">
-                    <li><a class="dropdown-item" href="../friends">Friends</a></li>
                     <hr class="borderline">
                     <li><a class="dropdown-item" href="../end_session.php">Sign Out</a></li>
             </ul>
