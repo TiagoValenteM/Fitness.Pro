@@ -54,6 +54,15 @@ body {
   backdrop-filter: blur(6px) brightness(70%);
   -webkit-backdrop-filter: blur(6px) brightness(70%);
 }
+.container-translucent-friends-activity {
+  border-radius: 30px;
+  box-shadow: 0px 7px 10px 0px rgba(0, 0, 0, 0.5);
+  width: 420px;
+  height: 700px;
+  background-color: rgba(19, 19, 19, 0.5);
+  backdrop-filter: blur(6px) brightness(70%);
+  -webkit-backdrop-filter: blur(6px) brightness(70%);
+}
 
 .container-translucent-social-profile {
   border-radius: 30px;
@@ -107,6 +116,17 @@ body {
 }
 
 .container-translucent-message:hover .friends-photo-sm{width: 70px;}.container-translucent-message:hover{background-color: rgba(19, 19, 19, 0.8);} {
+}
+
+.container-translucent-social-activities {
+  border-radius: 30px;
+  box-shadow: 0px 7px 10px 0px rgba(0, 0, 0, 0.5);
+  width: 380px;
+  max-height: 180px;
+  background-color: rgba(247, 31, 106, 0.8);
+}
+
+.container-translucent-social-activities:hover .icon-size-md-form{width: 70px;height: 70px}.container-translucent-social-activities:hover{background-color: rgba(19, 19, 19, 0.8);} {
 }
 
 .container-translucent-each-friend{
@@ -545,6 +565,9 @@ input:focus{
   padding-right: 45px;
   padding-left: 45px;
 }
+.padding-sides-sm{
+  padding: 15px;
+}
 .padding-50{
   padding-top: 50px;
 }
@@ -752,10 +775,16 @@ input:focus{
   .mobile-menu{
     display: none !important;
   }
+  .flex-row{
+    flex-wrap: wrap;
+  }
 }
 @media screen and (max-width: 1300px) {
   .container-translucent-each-activity {
     width: 320px;
+  }
+  .flex-row{
+    flex-wrap: wrap;
   }
 }
 @media screen and (max-width: 1024px) {

@@ -14,6 +14,25 @@ if (!isset($_COOKIE['selected_user_id']) || !isset($_COOKIE['selected_user'])) {
     setcookie('selected_user',  $data['name']);
 }
 
+function getExercisesbyUser($link, $user_id){
+    $exercises_query = mysqli_query($link,"SELECT `user_id` FROM exercises WHERE user_id='$user_id'");
+    $exercises_query_fetch = mysqli_fetch_assoc($exercises_query);
+    if (isset($exercises_query_fetch['user_id'])){
+        $query = mysqli_query($link,"SELECT * FROM exercises 
+            INNER JOIN exercises_default 
+            ON exercises.exercise_id = exercises_default.exercise_id 
+            WHERE user_id='$user_id' 
+            ORDER BY `date_done` DESC ");
+        $display_list = array();
+
+        while($activity_row = mysqli_fetch_assoc($query)) {
+            $display_list[] = $activity_row;
+        }
+        return $display_list;
+    }
+}
+
+
 function getFriendsFollow($link) {
     $follow_links = mysqli_query($link,"SELECT * FROM friends_follow");
     $friends_follow_arr = array();

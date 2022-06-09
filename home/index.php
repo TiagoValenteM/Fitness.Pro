@@ -15,6 +15,7 @@ $profile_photo = $link->query("SELECT `img_data` FROM profile_img  WHERE id='$id
 $users = $link->query("SELECT * FROM users");
 $friends_follow = getFriendsFollow($link);
 
+$count_user = 0;
 ?>
 
 <!DOCTYPE html>
@@ -177,6 +178,48 @@ $friends_follow = getFriendsFollow($link);
             } ?>
         </div>
     </div>
+        <div class="container-translucent-friends-activity center margin-top-bottom translate margin-responsive overflow-y scrollbar">
+            <div class="center padding-50">
+                <h2 class="title-box blue">Activity</h2>
+                <h4 class="bold-paragraph-box white margin-paragraph-container">(Latest exercises)</h4>
+            </div>
+            <div class="wrap-friends">
+                <?php
+                $display_list = getExercisesbyUser($link, $_COOKIE['selected_user_id']);
+                if (isset($display_list)){ ?>
+                    <?php while ($count_user < 7 && $count_user < count($display_list)) { ?>
+                        <div class="container-translucent-social-activities margin-activity-md row-space-between center-around margin-responsive padding-sides-sm">
+                                <div class="column">
+                                    <img class="icon-size-md-form padding-list-icon" src="data:image/jpg;base64,<?php echo base64_encode($display_list[$count_user]['img_data']); ?>"  alt=""/>
+                                </div>
+                                <div class="column">
+                                    <div class="row-space-between margin-activity">
+                                        <?php
+                                        echo "<span class='headings-box-sm green margin-profile-side'>".($display_list[$count_user]['exercise_type'])."</span>";
+                                        echo "<span class='paragraph-box-xl white margin-profile-side'>".($display_list[$count_user]['total_kcal'])." Kcal</span>";
+                                        ?>
+                                    </div>
+                                    <div class="row-space-between margin-activity">
+                                        <?php
+                                        echo "<span class='paragraph-box-xl white margin-profile-side'>".($display_list[$count_user]['status'])."</span>";
+                                        echo "<span class='paragraph-box-xl white margin-profile-side'>".($display_list[$count_user]['people'])."</span>";
+                                        echo "<span class='paragraph-box-xl white margin-profile-side'>".($display_list[$count_user]['place'])."</span>";
+                                        ?>
+                                    </div>
+                                    <div class="row-space-between margin-activity">
+                                        <?php
+                                        echo "<span class='paragraph-box-xl white margin-profile-side'>".($display_list[$count_user]['total_time'])."</span>";
+                                        echo "<span class='paragraph-box-xl white margin-profile-side'>".($display_list[$count_user]['date_done'])."</span>";
+                                        ?>
+                                    </div>
+                            </div>
+                        </div>
+                        <?php $count_user  = $count_user + 1; } ?>
+                <?php }else {
+                    echo "<span class='headings-box white margin-paragraph-container height_80 center'>No workouts available</span>";
+                } ?>
+            </div>
+        </div>
   </div>
   <footer class="padding-footer">
       <hr class="borderline">
