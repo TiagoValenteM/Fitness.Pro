@@ -6,10 +6,12 @@ require_once '../session.php';
 include("../config.php");
 include("../scripts/exercises_list.php");
 include("../scripts/admin_dashboard.php");
+$data = getLoggedUserData($link);
+$id = $data['id'];
 
 // check if the user is the admin
-if ($_SESSION['user'] != 'admin') {
-    header('location: ../index');
+if ($data['user_type'] != 'admin') {
+    header('location: ../home');
     exit();
 }
 // counter for exercise list available
@@ -23,38 +25,28 @@ $counter = 0;
     <meta name="viewport" content="viewport-fit=cover, initial-scale=1.0" />
     <link rel="icon" type="imagem/png" href="favicon.ico" />
     <link rel="stylesheet" href="./style.css" />
+    <link href="https://unpkg.com/filepond@^4/dist/filepond.css" rel="stylesheet" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/filepond@^4/dist/filepond.js"></script>
     <script src="js/script.js"></script>
     <title>Profile - Fitness.Pro</title>
 </head>
 <body class="background">
 <nav class="navbar-design justify-between flex-row">
     <div class="flex-row margin-left">
-        <h3 class="logo-style">
+        <h3 class="logo-style-admin">
             Fitness.Pro
         </h3>
     </div>
     <div class="flex-row margin-right">
-        <a class="nav-link-style nav-link nav-desktop" href="../home">
-            Home
-        </a>
-        <a class="nav-link-style nav-link nav-desktop" href="../activity">
-            Activity
-        </a>
         <div class="dropdown">
-            <button class="btn" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false"><img class="menu-img" src="../img/navbar/menu.svg" alt="">
+            <button class="btn" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false"><img class="menu-img" src="../img/navbar/menu_2.svg" alt="">
             </button>
             <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                 <div class="center"> </div>
-                <li><a class="dropdown-item mobile-menu" href="../home">Home</a></li>
-                <hr class="borderline mobile-menu">
-                <li><a class="dropdown-item mobile-menu" href="../activity">Activity</a></li>
-                <hr class="borderline mobile-menu">
-                <li><a class="dropdown-item" href="../preferences">Preferences</a></li>
-                <hr class="borderline">
                 <li><a class="dropdown-item" href="../end_session.php">Sign Out</a></li>
             </ul>
         </div>
@@ -63,8 +55,7 @@ $counter = 0;
 <div class="flex-row">
     <div class="container-translucent-workouts margin-top-bottom space-around translate margin-responsive" id="open_box">
         <div class="center margin-heading-container">
-            <h2 class="title-box blue">+ Workouts</h2>
-            <h4 class="bold-paragraph-box white margin-paragraph-container">(Click in an icon to add a workout)</h4>
+            <h2 class="title-box blue">Workouts</h2>
         </div>
         <div class="center height_full">
             <div class="flex-row center">
@@ -144,9 +135,10 @@ $counter = 0;
             </div>
             <form method="POST" class="column-space-around-100" enctype="multipart/form-data">
                 <div class="margin-profile justify-end column" id="actual_exercise">
-                    <input type="text" name="exercise_type" placeholder="Exercise Type">
-                    <input type="text" name="kcal_hour" placeholder="Kcal per Hour">
-                    <input type="file" name="img_data" accept=".png,.gif,.jpg,.webp">
+                    <input type="text" name="exercise_type" class="input-field margin-profile" placeholder="Exercise Type">
+                    <input type="text" name="kcal_hour" class="input-field margin-profile" placeholder="Kcal per Hour">
+                    <input type="file" name="img_data" id="img_data" class="margin-profile hidden" accept=".png,.gif,.jpg,.webp">
+                    <input type="file" class="margin-profile my-pond" accept=".png,.gif,.jpg,.webp">
                     <div class="flex-row">
                         <button
                                 type="button"
@@ -157,13 +149,6 @@ $counter = 0;
                         </button>
                         <button
                                 type="submit"
-                                name="delete"
-                                class="button-green bold-paragraph-box margin-left"
-                        >
-                            Delete
-                        </button>
-                        <button
-                                type="submit"
                                 name="modify"
                                 class="button-green bold-paragraph-box margin-left"
                         >
@@ -171,7 +156,36 @@ $counter = 0;
                         </button>
                     </div>
 
+                    <!-- include FilePond library -->
+                    <script src="https://unpkg.com/filepond/dist/filepond.min.js"></script>
+
+                    <!-- include FilePond jQuery adapter -->
+                    <script src="https://unpkg.com/jquery-filepond/filepond.jquery.js"></script>
+
+                    <script>
+                        $(function(){
+
+                            // Turn input element into a pond
+                            $('.my-pond').filepond();
+
+                            // Listen for addfile event
+                            $('.my-pond').on('FilePond:addfile', function(e) {
+                                console.log('file added event', e.detail.file);
+                                $('#img_data').file(e.detail.file)
+                                console.log($('#img_data').files)
+                            });
+                        });
+                    </script>
                 </div>
+            </form>
+            <form method="POST"  enctype="multipart/form-data">
+            <button
+                    type="submit"
+                    name="delete"
+                    class="button-green bold-paragraph-box margin-left"
+            >
+                Delete
+            </button>
             </form>
         </div>
     </div>
@@ -188,7 +202,7 @@ $counter = 0;
 <footer class="padding-footer">
     <hr class="borderline">
     <div class="flex-row justify-around sm-footer">
-        <h5 class="footer-text ">Copyright © 2022    Fitness.Pro.    All rights reserved.</h5>
+        <h5 class="footer-text">Copyright © 2022    Fitness.Pro.    All rights reserved.</h5>
         <h5 class="footer-text">Portugal</h5>
     </div>
 </footer>

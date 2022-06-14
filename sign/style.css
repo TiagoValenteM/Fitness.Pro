@@ -12,7 +12,7 @@ body {
 }
 .background {
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url(https://www.apple.com/v/apple-fitness-plus/p/images/overview/hero/hero_08__dskuh80guz8m_large_2x.jpg)
+    url(../img/background/background_sign.jpeg)
       no-repeat center center fixed;
   background-size: cover;
   font-family: SF Pro Display, SF Pro Icons, Helvetica Neue, Helvetica, Arial,

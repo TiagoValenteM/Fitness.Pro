@@ -9,10 +9,14 @@ include("../scripts/ideal_weight.php");
 include("../scripts/exercises_list.php");
 include("../scripts/workout_add.php");
 include("../scripts/activity_display.php");
-
-// getting data from the user that is logged in
 $data = getLoggedUserData($link);
 $id = $data['id'];
+
+// check if the user is the admin
+if ($data['user_type'] == 'admin') {
+    header('location: ../admin');
+    exit();
+}
 
 // getting image from database
 $profile_photo = $link->query("SELECT `img_data` FROM profile_img  WHERE id='$id' ORDER BY `date` DESC LIMIT 1");

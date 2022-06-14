@@ -7,14 +7,27 @@ body {
   padding: 0;
   overflow-y: auto;
   overflow-x: hidden;
-  background-color: #e6e6e6;
+  background-color: #f3f3f2 !important;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+  url(../img/background/background_admin.jpeg)
+  no-repeat center center fixed ;
+  background-size: contain;
   font-family: SF Pro Display, SF Pro Icons, Helvetica Neue, Helvetica, Arial,
   sans-serif;
 }
-.background {
-  background: url(https://www.apple.com/v/apple-fitness-plus/p/images/overview/hero/hero_06__ggh6zxlburm2_medium_2x.jpg)
-  no-repeat center center fixed;
-  background-size: contain;
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  -webkit-text-fill-color: #f3f3f2;
+  -webkit-box-shadow: transparent;
+  transition: background-color 5000s;
 }
 
 /* Container Design */
@@ -142,30 +155,16 @@ body {
   margin-bottom: 3vh;
   top: 0;
   z-index: 1030; /* to prevent the navbar getting covered up by other content */
-  background-color: #e6e6e6;
 }
-.logo-style {
+.logo-style-admin {
   font-size: 28px;
   line-height: 1.05;
   font-weight: 600;
   letter-spacing: -0.015em;
   font-family: SF Pro Display, SF Pro Icons, Helvetica Neue, Helvetica, Arial,
     sans-serif;
-  color: #f71f6a;
+  color: #99fb0b;
   padding-top: 1.5vh;
-}
-.nav-link-style {
-  font-size: 18px;
-  line-height: 1.05;
-  font-weight: 450;
-  letter-spacing: -0.015em;
-  font-family: SF Pro Display, SF Pro Icons, Helvetica Neue, Helvetica, Arial,
-    sans-serif;
-  color: #383938 !important;
-  padding-top: 1.25vh !important;
-}
-.nav-link-style:hover {
-  color: #99fb0b !important;
 }
 .margin-left {
   margin-left: 4%;
@@ -215,12 +214,12 @@ body {
     sans-serif;
 }
 .dropdown-item:hover {
-  color: #99fb0b !important;
+  color: #f71f6a !important;
 }
 .borderline {
   display: flex;
   align-items: center;
-  border-bottom: 3px #383938;
+  background-color: #f3f3f2;
   margin-left: 10%;
   margin-right: 10%;
 }
@@ -228,6 +227,23 @@ button:hover,
 button:focus {
   outline: none !important;
   box-shadow: none !important;
+}
+
+.input-field {
+  border-radius: 0%;
+  border: 0;
+  padding: 0;
+  background-color: transparent;
+  border-bottom: 2px solid #f71f6a;
+  font-size: 16px;
+  line-height: 35px;
+  color: #f3f3f2;
+}
+.input-field:focus {
+  outline: none;
+  border-bottom: 2px solid #04f1d6;
+  color: #f3f3f2;
+  font-size: 16px;
 }
 
 /* Button Design */
@@ -395,6 +411,7 @@ input:focus{
   width: 70%;
 }
 
+
 .margin-top-bottom {
   margin-bottom: 30px;
   margin-top: 30px;
@@ -537,7 +554,7 @@ input:focus{
   letter-spacing: -0.015em;
   font-family: SF Pro Display, SF Pro Icons, Helvetica Neue, Helvetica, Arial,
   sans-serif;
-  color: #383938;
+  color: #f3f3f2;
 }
 
 .fade-in {
@@ -631,9 +648,6 @@ input:focus{
     height: 750px;
   }
   .container-translucent-workouts {
-    width: 600px;
-  }
-  .container-translucent-form {
     width: 600px;
   }
   .container-translucent-activity {

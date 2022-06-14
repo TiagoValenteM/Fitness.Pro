@@ -8,6 +8,12 @@ include("../scripts/activity_display.php");
 $data = getLoggedUserData($link);
 $id = $data['id'];
 
+// check if the user is the admin
+if ($data['user_type'] == 'admin') {
+    header('location: ../admin');
+    exit();
+}
+
 // getting image from database
 $profile_photo = $link->query("SELECT `img_data` FROM profile_img  WHERE id='$id'");
 
@@ -79,7 +85,7 @@ $count_weight = 0;
       </div>
     </nav>
     <div class="col background translate" id="main">
-          <img class="main-image" src="https://www.apple.com/v/apple-fitness-plus/p/images/overview/trainers_hero__fgvws0hosfiq_large_2x.jpg" alt="">
+          <img class="main-image" src="../img/background/background_activity.jpeg" alt="">
         <div class="text-over">
           <h5 class="title-main">Activity</h5>
         </div>

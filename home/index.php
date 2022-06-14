@@ -5,10 +5,14 @@ require_once '../session.php';
 // connects to the database 'fitnesspro'
 include("../config.php");
 include("friends_helper.php");
-
-// getting data from the user that is logged in
 $data = getLoggedUserData($link);
 $id = $data['id'];
+
+// check if the user is the admin
+if ($data['user_type'] == 'admin') {
+    header('location: ../admin');
+    exit();
+}
 
 // getting image from database
 $profile_photo = $link->query("SELECT `img_data` FROM profile_img  WHERE id='$id'");
@@ -150,7 +154,7 @@ $count_user = 0;
         </div>
         <div  class="wrap-friends" >
             <?php while($row = mysqli_fetch_assoc($users)) {
-                if ($row['id'] != $id && $row['id'] != 1  ) { ?>
+                if ($row['id'] != $id && $row['user_type'] != 'admin'  ) { ?>
                     <form method="POST" class="hover-friend">
                         <div class="container-translucent-each-friend margin-activity-md row-space-between padding-sides">
                             <div class="center">

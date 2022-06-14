@@ -11,7 +11,7 @@ $exercise_default = mysqli_query($link,"SELECT * FROM exercises_default WHERE ex
 $exercise_fetch = mysqli_fetch_assoc($exercise_default);
 
 echo "<div>
-            <h1 class='headings-box-sm white margin-paragraph-container'>New workout?<br /></h1>
+            <h1 class='headings-box-sm white margin-paragraph-container'>Updating workout?<br /></h1>
             <h1 class='title-box pink margin-paragraph-container margin-left'>".$exercise_fetch['exercise_type']."</h1>
         </div>
         <div>

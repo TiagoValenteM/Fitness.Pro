@@ -8,6 +8,12 @@ include("../scripts/profile_upload.php");
 include("../scripts/weight_add.php");
 $data = getLoggedUserData($link);
 $id = $data['id'];
+
+// check if the user is the admin
+if ($data['user_type'] == 'admin') {
+    header('location: ../admin');
+    exit();
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">

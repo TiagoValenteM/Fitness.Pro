@@ -12,7 +12,7 @@ body {
   sans-serif;
 }
 .background {
-  background: url(https://www.apple.com/v/apple-fitness-plus/p/images/overview/hero/hero_06__ggh6zxlburm2_medium_2x.jpg)
+  background: url(../img/background/background_profile.jpeg)
   no-repeat center center fixed;
   background-size: contain;
 }
