@@ -150,7 +150,7 @@ $count_user = 0;
         </div>
         <div  class="wrap-friends" >
             <?php while($row = mysqli_fetch_assoc($users)) {
-                if ($row['id'] != $id) { ?>
+                if ($row['id'] != $id && $row['id'] != 1  ) { ?>
                     <form method="POST" class="hover-friend">
                         <div class="container-translucent-each-friend margin-activity-md row-space-between padding-sides">
                             <div class="center">

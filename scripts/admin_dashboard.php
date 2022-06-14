@@ -4,13 +4,14 @@
 require_once '../session.php';
 // connects to the database 'fitnesspro'
 include("../config.php");
-$data = getLoggedUserData($link);
-$id = $data['id'];
 
  // getting the selected exercise
-$exercise_id = $_COOKIE['exercise_id'];
-$exercise_info = mysqli_query($link,"SELECT * FROM exercises_default WHERE exercise_id='$exercise_id'");
-$exercise = mysqli_fetch_assoc($exercise_info);
+if (isset($_COOKIE['exercise_id'])){
+    $exercise_id = $_COOKIE['exercise_id'];
+    $exercise_info = mysqli_query($link,"SELECT * FROM exercises_default WHERE exercise_id='$exercise_id'");
+    $exercise = mysqli_fetch_assoc($exercise_info);
+}
+
 
 function NewWorkout ($link, $exercise_type, $kcal_hour){
     $insert = $link->prepare("INSERT INTO exercises_default (`exercise_type`,`img_name`,`img_data`,`kcal_hour`) VALUES ('$exercise_type',?,?,'$kcal_hour')");

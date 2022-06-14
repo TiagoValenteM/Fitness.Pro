@@ -6,11 +6,7 @@ require_once '../session.php';
 include("../config.php");
 include("../scripts/profile_upload.php");
 include("../scripts/weight_add.php");
-
-// getting data from the user that is logged in
-$user = mysqli_real_escape_string($link, $_SESSION['user']);
-$result = mysqli_query($link,"SELECT * FROM users WHERE email='$user'");
-$data = mysqli_fetch_assoc($result);
+$data = getLoggedUserData($link);
 $id = $data['id'];
 ?>
 <!DOCTYPE html>

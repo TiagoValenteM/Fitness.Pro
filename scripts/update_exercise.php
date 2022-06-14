@@ -4,8 +4,6 @@
 require_once '../session.php';
 // connects to the database 'fitnesspro'
 include("../config.php");
-$data = getLoggedUserData($link);
-$id = $data['id'];
 
 // getting the id from each exercise
 $exercise_id = $_REQUEST['exercise_id'];

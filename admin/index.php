@@ -7,6 +7,11 @@ include("../config.php");
 include("../scripts/exercises_list.php");
 include("../scripts/admin_dashboard.php");
 
+// check if the user is the admin
+if ($_SESSION['user'] != 'admin') {
+    header('location: ../index');
+    exit();
+}
 // counter for exercise list available
 $counter = 0;
 ?>
@@ -139,8 +144,8 @@ $counter = 0;
             </div>
             <form method="POST" class="column-space-around-100" enctype="multipart/form-data">
                 <div class="margin-profile justify-end column" id="actual_exercise">
-                    <input type="text" name="exercise_type" placeholder="<?php echo $_COOKIE['exercise_id'] ?>">
-                    <input type="text" name="kcal_hour" placeholder="<?php echo $exercise['kcal_hour'] ?>">
+                    <input type="text" name="exercise_type" placeholder="Exercise Type">
+                    <input type="text" name="kcal_hour" placeholder="Kcal per Hour">
                     <input type="file" name="img_data" accept=".png,.gif,.jpg,.webp">
                     <div class="flex-row">
                         <button

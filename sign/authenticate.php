@@ -7,21 +7,31 @@ if (@$_POST['user'] && @$_POST['pass']) {
     $upass = md5($_POST['pass']);
 
     // query message to obtain user from database
-    $sql = "SELECT id FROM users WHERE password='$upass' AND email='$uuser'";
-    $result = mysqli_query($link, $sql);
-    $num = mysqli_num_rows($result); // number of users found (should be 1 if logged in successfully)
+    $sql = mysqli_query($link,"SELECT id FROM users WHERE password='$upass' AND user='$uuser'");
+    $user_found = mysqli_fetch_assoc($sql); // user found
 
-    if ($num < 1) {
+    if (!isset($user_found)) {
         failed();
         exit();
-    } else {
-        $_SESSION['user'] = $uuser;
-        // user was found with correct password, therefore we can set the session variable
-        // to acknowledge that the user is logged in
-        sucessful();
+    } else{
+        $id_user = implode($user_found);
+        $is_admin = mysqli_query($link, "SELECT id FROM users WHERE id='$id_user' AND user_type='admin'");
+        $check = mysqli_num_rows($is_admin); // number of users found (not found means it's just an user)
+        if ($check == 0){
+            $_SESSION['user'] = $uuser;
+            // user was found with correct password, therefore we can set the session variable
+            // to acknowledge that the user is logged in
+            successful();
+        }
+        else{
+            $_SESSION['user'] = $uuser;
+            // user was found with correct password, therefore we can set the session variable
+            // to acknowledge that the user is logged in
+            admin_dashboard();
+        }
     }
 } elseif (!@isset($_SESSION['user'])) {
-    // if hasn't received user and pass, and is not logged in, return to login
+    // if hasn't received user and pass, and is not logged in, return to sign in
     failed();
     exit();
 }
@@ -33,9 +43,14 @@ function failed()
     header('location:../index'); // redirect
 }
 
-function sucessful()
+function successful()
 {
     header('location:../index'); // redirect
 }
 
-?>
+function admin_dashboard()
+{
+    header('location:../admin'); // redirect
+}
+
+

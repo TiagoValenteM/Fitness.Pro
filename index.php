@@ -60,18 +60,18 @@ if (isset($_SESSION['user'])) {
               <div>
               <form action="sign/authenticate.php" method="POST" class="width">
                 <div class="form-group margin-top">
-                  <label for="exampleInputEmail1">Email</label>
+                  <label for="exampleInputUser1">Username</label>
                   <input
-                    type="email"
+                    type="text"
                     class="input-field"
-                    id="exampleInputEmail1"
-                    aria-describedby="emailHelp"
+                    id="exampleInputUser1"
+                    aria-describedby="userHelp"
                     name="user"
                     maxlength="255"
                     required
                   />
                   <small id="emailHelp" class="form-text text-muted"
-                    >Please enter an email adress.</small
+                    >Please enter your username.</small
                   >
                 </div>
                 <div class="form-group">
