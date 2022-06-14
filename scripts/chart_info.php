@@ -6,14 +6,22 @@ require_once '../session.php';
 include("../config.php");
 $data = getLoggedUserData($link);
 $id = $data['id'];
+
+// getting the current month
 $current_month = date('m');
-$teste = mysqli_query($link,"SELECT exercise_type, COUNT(*) AS sum_exercise FROM exercises 
-    INNER JOIN exercises_default 
-    ON exercises.exercise_id=exercises_default.exercise_id  WHERE user_id='$id' AND MONTH(date_done)='$current_month' GROUP BY exercise_type");
-$teste_list = array();
-// selecting element in an array
-while($teste2 = mysqli_fetch_assoc($teste)) {
-    $teste_list[] = [$teste2['exercise_type'], $teste2['sum_exercise']];
+
+function GetMonthWorkouts ($link,$id,$current_month){
+    $get_exercises = mysqli_query($link,"SELECT exercise_type, COUNT(*) AS sum_exercise 
+        FROM exercises INNER JOIN exercises_default 
+        ON exercises.exercise_id=exercises_default.exercise_id  
+        WHERE user_id='$id' AND MONTH(date_done)='$current_month' 
+        GROUP BY exercise_type");
+    $month_exercises = array();
+    while($fetch = mysqli_fetch_assoc($get_exercises)) {
+        $month_exercises[] = [$fetch['exercise_type'], $fetch['sum_exercise']];
+    }
+    return $month_exercises;
 }
 
-echo json_encode($teste_list);
+
+echo json_encode(GetMonthWorkouts ($link,$id,$current_month));
