@@ -10,6 +10,7 @@ function remove_all_cookies() {
     setcookie("selected_user_id", "", time() - 3600, '/');
     setcookie("selected_user", "", time() - 3600);
     setcookie("selected_user", "", time() - 3600, '/');
+    setcookie("exercise_id", "", time()-3600);
 }
 
 // if the user is logged in, then remove session variable and

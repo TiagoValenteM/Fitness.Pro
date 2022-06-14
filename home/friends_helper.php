@@ -32,7 +32,6 @@ function getExercisesbyUser($link, $user_id){
     }
 }
 
-
 function getFriendsFollow($link) {
     $follow_links = mysqli_query($link,"SELECT * FROM friends_follow");
     $friends_follow_arr = array();

@@ -27,7 +27,4 @@ if (isset($_POST["submit"]) && isset($_COOKIE['exercise_id']))  {
     // inserting information
     $exercise_insert = ("INSERT INTO exercises (`exercise_id`,`status`,`place`,`people`,`date_done`,`total_time`,`total_kcal`,`user_id`) VALUES ('$exercise_id','$status','$place','$people','$date_done','$total_time','$total_kcal','$id')");
     $exercise_inserted = mysqli_query($link, $exercise_insert);
-
-    // remove cookie
-    setcookie("exercise_id", "", time()-3600);
 }

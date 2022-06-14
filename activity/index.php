@@ -2,15 +2,10 @@
 // load session.php that validates if the user is logged in
 // if the user is not logged in, redirects to login page
 require_once '../session.php';
-
 // connects to the database 'fitnesspro'
 include("../config.php");
 include("../scripts/activity_display.php");
-
-// getting data from the user that is logged in
-$user = mysqli_real_escape_string($link, $_SESSION['user']);
-$result = mysqli_query($link,"SELECT * FROM users WHERE email='$user'");
-$data = mysqli_fetch_assoc($result);
+$data = getLoggedUserData($link);
 $id = $data['id'];
 
 // getting image from database
@@ -31,7 +26,6 @@ $count_user = 0;
 
 // counter for user's exercises list
 $count_weight = 0;
-
 ?>
 
 <!DOCTYPE html>
@@ -50,6 +44,7 @@ $count_weight = 0;
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" ></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+      <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script src="js/script.js"></script>
     <title>Activity - Fitness.Pro</title>
   </head>
@@ -61,20 +56,24 @@ $count_weight = 0;
       </h3>
     </div>
     <div class="flex-row margin-right">
-    <a class="nav-link-style nav-link " href="../home">
+    <a class="nav-link-style nav-link nav-desktop" href="../home">
        Home
 </a>
-<a class="nav-link-style nav-link " href="../profile">
+<a class="nav-link-style nav-link nav-desktop" href="../profile">
        Profile
 </a>
       <div class="dropdown">
         <button class="btn" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false"><img class="menu-img" src="../img/navbar/menu.svg" alt="">
         </button>
             <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-              <div class="center"> </div>
-              <li><a class="dropdown-item" href="../preferences">Preferences</a></li>
-              <hr class="borderline">
-              <li><a class="dropdown-item" href="../end_session.php">Sign Out</a></li>
+                <div class="center"></div>
+                <li><a class="dropdown-item mobile-menu" href="../home">Home</a></li>
+                <hr class="borderline mobile-menu">
+                <li><a class="dropdown-item mobile-menu" href="../profile">Profile</a></li>
+                <hr class="borderline mobile-menu">
+                <li><a class="dropdown-item" href="../preferences">Preferences</a></li>
+                <hr class="borderline">
+                <li><a class="dropdown-item" href="../end_session.php">Sign Out</a></li>
             </ul>
         </div>
       </div>
@@ -82,19 +81,17 @@ $count_weight = 0;
     <div class="col background translate" id="main">
           <img class="main-image" src="https://www.apple.com/v/apple-fitness-plus/p/images/overview/trainers_hero__fgvws0hosfiq_large_2x.jpg" alt="">
         <div class="text-over">
-          <h5 class="title-main ">Activity</h5>
+          <h5 class="title-main">Activity</h5>
         </div>
     </div>
-<div class="flex-row padding-top-content">
-  <div class="column-half">
+<div class="flex-row padding-top-content space-around margin-responsive">
           <div class="container-translucent-trends margin-top-bottom translate margin-responsive">
               <div class="center margin-heading-container">
                   <h2 class="title-box pink">Trends</h2>
                   <h4 class="bold-paragraph-box gray margin-paragraph-container">Keep it Going</h4>
               </div>
               <div class="center-trends-align height_65 overflow-x scrollbar">
-                  <div class="center-trends-align weight-border"></div>
-                  <div class="flex-row">
+                  <div class="scroll-row">
                       <div class="center margin-weight-side">
                           <?php if($profile_photo->num_rows > 0){?>
                           <?php while($row = $profile_photo->fetch_assoc()){ ?>
@@ -106,6 +103,7 @@ $count_weight = 0;
                               <img class="weights-icon margin-top-bottom" src="../img/profile_img/default_female.jpeg" alt="">
                           <?php }?>
                           <div class="indicator-weight center"></div>
+                          <div class="weight-border-initial"></div>
                           <div class="container-translucent-each-weight center margin-top-bottom">
                               <span class='margin-paragraph-container headings-box-sm white padding-list-icon'><?php echo $data['initial_weight']?> Kg</span>
                               <?php $initial_weight_date = $data["date"];?>
@@ -117,6 +115,7 @@ $count_weight = 0;
                               <div class="center margin-weight-side">
                                   <img class="weights-icon margin-top-bottom" src="../img/exercises/other.png">
                                   <div class="indicator-weight center"></div>
+                                  <div class="weight-border"></div>
                                   <div class="container-translucent-each-weight center margin-top-bottom">
                                       <span class='margin-paragraph-container headings-box-sm white padding-list-icon'><?php echo $display_weight[$count_weight]['weight'] ?> Kg</span>
                                       <span class='paragraph-box green margin-paragraph-container'><?php echo date('d-m-Y', strtotime($weight_date)) ?></span>
@@ -171,43 +170,17 @@ $count_weight = 0;
               } ?>
           </div>
       </div>
-  </div>
-  <div class="column-half center">
-          <div class="container-translucent-rings center margin-top-bottom translate margin-responsive">
-            <div class="black">
-              <h2 class="title-section">Rings</h2>
-                <div class="container">
-                    <div class="row">
-                    </div>
-                </div>
-                <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-                <script type="text/javascript">
-                    google.charts.load('current', {'packages':['corechart']});
-                    google.charts.setOnLoadCallback(drawChart);
-                    function drawChart() {
-                        var data = google.visualization.arrayToDataTable([
-                            ['class','students'],
-
-                            <?php
-
-                                //echo "<pre>";print_r($row); die;
-                                echo "['".$data["email"]."',".$data["id"]."],  ";
-                            ?>
-                        ]);
-                        var options = {
-                            title: 'School Data in chart',
-                            // pieHole: 0.4,
-                            is3d:true,
-                        };
-
-                        var chart = new google.visualization.PieChart(document.getElementById('piechart'));
-                        chart.draw(data, options);
-                    }
-                </script>
-                <div id="piechart" style="width: 100%; height: 500px;"></div>
-            </div>
+          <div class="container-translucent-rings margin-top-bottom translate margin-responsive">
+              <div class="center padding-50">
+                  <h2 class="title-box green">Rings</h2>
+                  <h4 class="bold-paragraph-box white margin-paragraph-container">Review this month's exercises</h4>
+              </div>
+              <div class="center height_330">
+                  <div id="rings" class="chart"></div>
+                  <span id="current_month" class="headings-box-sm white margin-profile display-none"><?php echo date('F Y'); ?></span>
+                  <h4 id="no_workouts" class="headings-box green margin-paragraph-container display-none no-workouts">No workouts this month</h4>
+              </div>
         </div>
-      </div>
 </div>
     <footer class="padding-footer">
     <hr class="borderline">

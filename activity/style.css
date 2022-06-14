@@ -78,11 +78,6 @@ body {
   max-width: 100%;
   height: auto;
 }
-.flex-row {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
 .justify-between {
   justify-content: space-between;
 }
@@ -204,6 +199,13 @@ button:focus {
   flex-direction: column;
 }
 
+.center-start {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+
 .center-trends-align{
   display: flex;
   align-self: flex-end;
@@ -212,6 +214,12 @@ button:focus {
 }
 .justify-around {
   justify-content: space-around;
+}
+.space-around {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
 }
 
 .padding-footer {
@@ -229,7 +237,7 @@ button:focus {
 
 .container-translucent {
   border-radius: 30px;
-  box-shadow: 0px 7px 10px 0px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 7px 10px 0 rgba(0, 0, 0, 0.5);
   width: 350px;
   height: 600px;
   background-color: rgba(56, 56, 56, 0.5);
@@ -260,6 +268,12 @@ button:focus {
   flex-direction: row;
   align-items: center;
 }
+.scroll-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 0;
+}
 .column-half{
   display: flex;
   align-items: center;
@@ -273,25 +287,25 @@ button:focus {
 }
 .container-translucent-trends {
   border-radius: 30px;
-  box-shadow: 0px 7px 10px 0px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 7px 10px 0 rgba(0, 0, 0, 0.5);
   width: 500px;
-  height: 400px;
+  height: 500px;
   background-color: rgba(4, 241, 214, 0.8);
   backdrop-filter: blur(6px) brightness(70%);
   -webkit-backdrop-filter: blur(6px) brightness(70%);
 }
 .container-translucent-rings {
   border-radius: 30px;
-  box-shadow: 0px 7px 10px 0px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 7px 10px 0 rgba(0, 0, 0, 0.5);
   width: 500px;
-  height: 700px;
+  height: 500px;
   background-color: rgba(19, 19, 19, 0.5);
   backdrop-filter: blur(6px) brightness(70%);
   -webkit-backdrop-filter: blur(6px) brightness(70%);
 }
 .container-translucent-activity {
   border-radius: 30px;
-  box-shadow: 0px 7px 10px 0px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 7px 10px 0 rgba(0, 0, 0, 0.5);
   width: 500px;
   height: 700px;
   background-color: rgba(247, 31, 106, 0.8);
@@ -319,6 +333,7 @@ button:focus {
 .overflow-x{
   overflow-x: auto;
   overflow-y: hidden;
+  position: relative;
 }
 .scrollbar {
   -ms-overflow-style: none;  /* Internet Explorer 10+ */
@@ -359,13 +374,13 @@ button:focus {
 }
 .container-translucent-each-activity {
   border-radius: 30px;
-  box-shadow: 0px 7px 10px 0px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 7px 10px 0 rgba(0, 0, 0, 0.5);
   width: 450px;
   background-color: rgba(19, 19, 19, 0.5);
 }
 .container-translucent-each-weight {
   border-radius: 23px;
-  box-shadow: 0px 7px 10px 0px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 7px 10px 0 rgba(0, 0, 0, 0.5);
   width: 150px;
   height: 60px;
   background-color: rgba(19, 19, 19, 0.5);
@@ -403,6 +418,9 @@ button:focus {
 .height_65{
   height: 65%;
 }
+.height_330{
+  height: 330px;
+}
 
 .weights-icon{
   height: 55px;
@@ -422,27 +440,60 @@ button:focus {
   letter-spacing: -0.015em;
   font-family: SF Pro Display, SF Pro Icons, Helvetica Neue, Helvetica, Arial,
   sans-serif;
-  font-color: #383938;
 }
 .weight-border {
-  width: 100%;
-  display: flex ;
   position: absolute;
+  width: 100%;
   margin-bottom: 8px;
   height: 10px;
-  background-color: rgba(243, 243, 242, 0.8);
-  border: none;
+  background-color: rgb(243, 243, 242);
+  fill: rgba(243, 243, 242, 0.8);
+}
+.weight-border-initial {
+  position: absolute;
+  width: 830px;
+  margin-bottom: 8px;
+  height: 10px;
+  background-color: rgb(243, 243, 242);
+  fill: rgba(243, 243, 242, 0.8);
 }
 .indicator-weight{
   border-left: 7px solid rgb(243, 243, 242);
   height: 25px;
   display: flex;
-  z-index: 10;
   left: 50%;
   margin-left: -3px;
   top: 0;
   border-radius: 10px;
 }
+
+.display-none{
+  display: none;
+}
+
+g g path
+{
+  stroke: #f3f3f2;
+  stroke-opacity: 1;
+  stroke-width: 3px;
+}
+
+g g circle
+{
+  fill: #f3f3f2;
+  stroke: #f3f3f2;
+  stroke-width: 5px;
+}
+
+div.google-visualization-tooltip { padding: 2px; border: none;
+  background-color: rgba(19, 19, 19, 0.8); border-radius: 10px;
+  box-shadow: 0 7px 10px 0 rgba(0, 0, 0, 0.5);
+}
+
+div.google-visualization-tooltip div {
+  color: #f3f3f2;
+}
+
 @keyframes slide {
   from {
     opacity: 0;
@@ -451,5 +502,162 @@ button:focus {
   to {
     opacity: 1;
     transform: translateY(0px);
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  .mobile-menu{
+    display: none !important;
+  }
+}
+@media screen and (max-width: 1919px) {
+  .mobile-menu{
+    display: none !important;
+  }
+  .flex-row{
+    flex-wrap: wrap;
+  }
+}
+@media screen and (max-width: 1300px) {
+  .flex-row{
+    flex-wrap: wrap;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .flex-row{
+    flex-wrap: wrap;
+  }
+  .mobile-menu{
+    display: none !important;
+  }
+}
+@media screen and (max-width: 990px){
+  .row-space-between{
+    flex-wrap: wrap;
+  }
+  .container-translucent-each-activity {
+    width: 450px;
+  }
+  .flex-row{
+    flex-wrap: wrap;
+  }
+  .mobile-menu{
+    display: none !important;
+  }
+
+}
+@media screen and (max-width: 640px) {
+  .weight-border-initial {
+    width: 720px;
+  }
+  .row-space-between{
+    flex-wrap: wrap;
+    padding-top: 10px;
+    padding-bottom: 3px;
+  }
+  .container-translucent-each-activity {
+    max-width: 320px;
+  }
+  .chart{
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 350px;
+  }
+  .container-translucent-trends {
+    width: 450px;
+  }
+  .container-translucent-rings {
+    width: 450px;
+  }
+  .container-translucent-activity {
+    width: 450px;
+  }
+  .title-main {
+    font-size: 110px;
+  }
+  .flex-row{
+    flex-wrap: wrap;
+  }
+  .nav-desktop{
+    display: none !important;
+  }
+  .mobile-menu{
+    display: flex !important;
+  }
+}
+@media screen and (max-width: 400px) {
+  .weight-border-initial {
+    width: 500px;
+  }
+  .row-space-between{
+    flex-wrap: wrap;
+    padding-top: 25px;
+    padding-bottom: 8px;
+  }
+  .margin-responsive {
+    margin-left: 13px !important;
+    margin-right: 13px !important;
+  }
+  .container-translucent-each-activity {
+    max-width: 270px;
+  }
+  .chart{
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 300px;
+  }
+  .container-translucent-trends {
+    width: 350px;
+  }
+  .container-translucent-rings {
+    width: 350px;
+  }
+  .container-translucent-activity {
+    width: 350px;
+  }
+  .title-main {
+    font-size: 90px;
+  }
+  .flex-row{
+    flex-wrap: wrap;
+  }
+  .mobile-menu{
+    display: flex !important;
+  }
+}
+@media screen and (max-width: 300px) {
+  .weight-border-initial {
+    width: 280px;
+  }
+  .row-space-between{
+    flex-wrap: wrap;
+    padding-top: 15px;
+  }
+  .container-translucent-each-activity {
+    max-width: 200px;
+  }
+  .no-workouts{
+    padding: 50%;
+  }
+  .chart{
+    width: 200px;
+  }
+  .container-translucent-trends {
+    width: 250px;
+  }
+  .container-translucent-rings {
+    width: 250px;
+  }
+  .container-translucent-activity {
+    width: 250px;
+  }
+  .title-main {
+    font-size: 60px;
+  }
+  .flex-row{
+    flex-wrap: wrap;
+  }
+  .mobile-menu{
+    display: flex !important;
   }
 }

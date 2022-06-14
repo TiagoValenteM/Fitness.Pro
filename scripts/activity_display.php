@@ -4,12 +4,7 @@
 require_once '../session.php';
 // connects to the database 'fitnesspro'
 include("../config.php");
-
-
-// getting data from the user that is logged in
-$user = mysqli_real_escape_string($link, $_SESSION['user']);
-$result = mysqli_query($link,"SELECT * FROM users WHERE email='$user'");
-$data = mysqli_fetch_assoc($result);
+$data = getLoggedUserData($link);
 $id = $data['id'];
 
 // connecting to the database and creating an array to check workouts by user
@@ -31,6 +26,3 @@ if (isset($exercises_query_fetch['user_id'])){
         $display_list[] = $activity_row;
     }
 }
-
-
-

@@ -133,9 +133,49 @@ $counter = 0;
             </div>
         </div>
     </div>
+    <div class="container-translucent-form margin-top-bottom fade-in hidden margin-responsive" id="close_box" >
+        <div class="add-workout-form">
+            <div class="margin-profile row-space-around-100 column" id="add-workout-header">
+            </div>
+            <form method="POST" class="column-space-around-100" enctype="multipart/form-data">
+                <div class="margin-profile justify-end column" id="actual_exercise">
+                    <input type="text" name="exercise_type" placeholder="<?php echo $_COOKIE['exercise_id'] ?>">
+                    <input type="text" name="kcal_hour" placeholder="<?php echo $exercise['kcal_hour'] ?>">
+                    <input type="file" name="img_data" accept=".png,.gif,.jpg,.webp">
+                    <div class="flex-row">
+                        <button
+                                type="button"
+                                class="button-return bold-paragraph-box"
+                                id="return_icon"
+                        >
+                            Cancel
+                        </button>
+                        <button
+                                type="submit"
+                                name="delete"
+                                class="button-green bold-paragraph-box margin-left"
+                        >
+                            Delete
+                        </button>
+                        <button
+                                type="submit"
+                                name="modify"
+                                class="button-green bold-paragraph-box margin-left"
+                        >
+                            Update
+                        </button>
+                    </div>
+
+                </div>
+            </form>
+        </div>
+    </div>
     <div>
-        <form>
-            <input type="text" name="kcal_hour" placeholder="kcal per hour">
+        <form class="column" method="POST" enctype="multipart/form-data">
+            <input type="text" name="exercise_type" placeholder="Name the exercise" required>
+            <input type="text" name="kcal_hour" placeholder="kcal per hour" required>
+            <input type="file" name="img_data" accept=".png,.gif,.jpg,.webp" required>
+            <input type="submit" name="new_workout" value="New Workout">
         </form>
     </div>
 </div>

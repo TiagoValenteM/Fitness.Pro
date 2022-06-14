@@ -368,7 +368,7 @@ $count_user = 0;
       </div>
   <footer class="padding-footer">
       <hr class="borderline">
-      <div class="flex-row justify-around sm-footer">
+      <div class="flex-row justify-around">
           <h5 class="footer-text ">Copyright © 2022    Fitness.Pro.    All rights reserved.</h5>
           <h5 class="footer-text">Portugal</h5>
       </div>
