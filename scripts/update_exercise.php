@@ -15,5 +15,5 @@ echo "<div>
             <h1 class='title-box pink margin-paragraph-container margin-left'>".$exercise_fetch['exercise_type']."</h1>
         </div>
         <div>
-            <img class='icon-size-md-form margin-icons margin-left' src='data:image/jpg;base64,".base64_encode($exercise_fetch['img_data'])."' >
+            <img class='icon-size-md-form margin-responsive img-responsive' src='data:image/jpg;base64,".base64_encode($exercise_fetch['img_data'])."' >
         </div>";

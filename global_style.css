@@ -1,0 +1,265 @@
+/* Font style */
+.title-box {
+    font-size: 30px;
+    line-height: 1.05;
+    font-weight: 600;
+    letter-spacing: -0.015em;
+    font-family: SF Pro Display, SF Pro Icons, Helvetica Neue, Helvetica, Arial,
+    sans-serif;
+}
+.headings-box {
+    font-size: 22px;
+    line-height: 1.05;
+    font-weight: 600;
+    letter-spacing: -0.015em;
+    font-family: SF Pro Display, SF Pro Icons, Helvetica Neue, Helvetica, Arial,
+    sans-serif;
+}
+.headings-box-sm {
+    font-size: 19px;
+    line-height: 1.05;
+    font-weight: 600;
+    letter-spacing: -0.015em;
+    font-family: SF Pro Display, SF Pro Icons, Helvetica Neue, Helvetica, Arial,
+    sans-serif;
+}
+.paragraph-box {
+    font-size: 16px;
+    line-height: 1.4705882353;
+    font-weight: 400;
+    letter-spacing: -0.022em;
+    font-family: SF Pro Display, SF Pro Icons, Helvetica Neue, Helvetica, Arial,
+    sans-serif;
+    text-align: justify;
+}
+.paragraph-box-xl {
+    font-size: 16px;
+    line-height: 1.4705882353;
+    font-weight: 550;
+    letter-spacing: -0.022em;
+    font-family: SF Pro Display, SF Pro Icons, Helvetica Neue, Helvetica, Arial,
+    sans-serif;
+}
+
+/* Colors */
+.pink {
+    color: #f71f6a;
+}
+.blue {
+    color: #04f1d6;
+}
+.green {
+    color: #99fb0b;
+}
+.gray{
+    color: #383938;
+}
+.white {
+    color: #f3f3f3;
+}
+
+/* NavBar Design */
+.navbar-design {
+    display: flex;
+    position: sticky;
+    min-height: 5vh !important;
+    margin-bottom: 3vh;
+    top: 0;
+    z-index: 1030; /* to prevent the navbar getting covered up by other content */
+    background-color: #e6e6e6;
+}
+.logo-style {
+    font-size: 28px;
+    line-height: 1.05;
+    font-weight: 600;
+    letter-spacing: -0.015em;
+    font-family: SF Pro Display, SF Pro Icons, Helvetica Neue, Helvetica, Arial,
+    sans-serif;
+    color: #f71f6a;
+    padding-top: 1.5vh;
+}
+.nav-link-style {
+    font-size: 18px;
+    line-height: 1.05;
+    font-weight: 450;
+    letter-spacing: -0.015em;
+    font-family: SF Pro Display, SF Pro Icons, Helvetica Neue, Helvetica, Arial,
+    sans-serif;
+    color: #383938 !important;
+    padding-top: 1.25vh !important;
+}
+.nav-link-style:hover {
+    color: #99fb0b !important;
+}
+.margin-left {
+    margin-left: 4%;
+}
+.margin-right {
+    margin-right: 4%;
+}
+.menu-img {
+    outline: none !important;
+    margin-top: 0.5vh;
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+.flex-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.justify-between {
+    justify-content: space-between;
+}
+.dropdown-menu {
+    border-radius: 10px !important;
+    border-style: none !important;
+    margin-top: 2vh !important;
+}
+.dropdown-item,
+.dropdown-item:hover {
+    display: flex !important;
+    justify-content: flex-end !important;
+    margin-right: 1vh !important;
+    color: #131313 !important;
+    background: none !important;
+    line-height: 1.05;
+    font-weight: 550;
+    letter-spacing: -0.015em;
+    font-family: SF Pro Display, SF Pro Icons, Helvetica Neue, Helvetica, Arial,
+    sans-serif;
+}
+.dropdown-item:hover {
+    color: #99fb0b !important;
+}
+
+/* Footer Design */
+.padding-footer {
+    padding-top: 4vh;
+    padding-bottom: 1.5vh;
+}
+.borderline {
+    display: flex;
+    align-items: center;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+.justify-around {
+    justify-content: space-around;
+}
+.footer-text {
+    font-size: 11px;
+    line-height: 1.05;
+    font-weight: 500;
+    letter-spacing: -0.015em;
+    font-family: SF Pro Display, SF Pro Icons, Helvetica Neue, Helvetica, Arial,
+    sans-serif;
+    color: #383938;
+}
+
+/* Buttons & Inputs*/
+button:hover,
+button:focus {
+    outline: none !important;
+    box-shadow: none !important;
+}
+input:focus{
+    outline: none;
+    box-shadow: none;
+}
+
+/* Hidden Content */
+.hidden{
+    display: none;
+}
+
+/* Height */
+.height_full{
+    height: 100%;
+}
+
+/* Icon Size */
+.icon-size-xl {
+    height: 90px;
+    width: 90px;
+    transition-duration: 0.5s;
+}
+.icon-size-xl:hover{
+    height: 110px;
+    width: 110px;
+    transition-duration: 0.5s;
+}
+.icon-size-md {
+    height: 70px;
+    width: 70px;
+    transition-duration: 0.5s;
+}
+.icon-size-md:hover{
+    height: 110px;
+    width: 110px;
+    transition-duration: 0.5s;
+}
+.icon-size-sm {
+    height: 50px;
+    width: 50px;
+    transition-duration: 0.5s;
+}
+.icon-size-sm:hover{
+    height: 110px;
+    width: 110px;
+    transition-duration: 0.5s;
+}
+.icon-size-xs {
+    height: 20px;
+    width: 20px;
+}
+.icon-size-md-form {
+    height: 60px;
+    width: 60px;
+    transition-duration: 0.5s;
+}
+.icon-size-md-form:hover{
+    height: 70px;
+    width: 70px;
+    transition-duration: 0.5s;
+}
+.icon-size-md-activity {
+    height: 70px;
+    width: 70px;
+}
+
+/* Margins */
+.margin-top-bottom {
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+.margin-profile {
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+.margin-side-form {
+    margin-left: 30px;
+    margin-right: 30px;
+}
+.margin-responsive {
+    margin-left: 13px;
+    margin-right: 13px;
+}
+.margin-icons{
+    margin: 8px;
+}
+.margin-heading-container{
+    padding-top: 60px;
+}
+.margin-paragraph-container{
+    margin-top: 5px;
+}
+.margin-activity {
+    margin-bottom: 8px;
+    margin-top: 8px;
+}
+.margin-activity-md {
+    margin-bottom: 10px;
+    margin-top: 10px;
+}

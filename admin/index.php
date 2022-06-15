@@ -25,6 +25,7 @@ $counter = 0;
     <meta name="viewport" content="viewport-fit=cover, initial-scale=1.0" />
     <link rel="icon" type="imagem/png" href="favicon.ico" />
     <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="../global_style.css" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
@@ -35,7 +36,7 @@ $counter = 0;
 <body class="background">
 <nav class="navbar-design justify-between flex-row">
     <div class="flex-row margin-left">
-        <h3 class="logo-style-admin">
+        <h3 class="logo-style">
             Fitness.Pro
         </h3>
     </div>
@@ -52,7 +53,7 @@ $counter = 0;
 </nav>
 <div class="flex-row space-around margin-responsive">
     <div class="container-translucent-admin-workouts margin-top-bottom space-around translate margin-responsive" id="open_box">
-        <div class="center margin-heading-container">
+        <div class="margin-heading-container wrap">
             <h2 class="title-box blue">Available Workouts</h2>
             <h4 class="bold-paragraph-box white margin-paragraph-container">(Click in an icon to update a workout)</h4>
         </div>
@@ -129,11 +130,11 @@ $counter = 0;
         </div>
     </div>
     <div class="container-translucent-update-workout margin-top-bottom fade-in hidden margin-responsive relative" id="close_box" >
-        <div class="add-workout-form">
-            <div class="margin-profile row-space-around-100 column" id="add-workout-header"></div>
-            <div class="height_65 center">
-                <form method="POST" class="margin-responsive" enctype="multipart/form-data">
-                    <div class="margin-profile justify-end column" id="actual_exercise">
+        <div class="margin-add-workout">
+            <div class="margin-profile row-space-around-100" id="add-workout-header"></div>
+            <div class="height_400">
+                <form method="POST" class="margin-side-form" enctype="multipart/form-data">
+                    <div class="margin-profile justify-end column-form" id="actual_exercise">
                         <input type="text" name="exercise_type" class="input-field margin-profile" placeholder="Exercise Type" required>
                         <input type="text" name="kcal_hour" class="input-field margin-profile" placeholder="Kcal per Hour" required>
                         <input type="file" name="img_data" id="img_data" class="margin-profile" accept=".png,.gif,.jpg,.webp" required>
@@ -155,16 +156,16 @@ $counter = 0;
                         </div>
                     </div>
                 </form>
-                <form method="POST"  style="position: absolute; margin-top: 164px; margin-right: 53px" enctype="multipart/form-data">
-                    <button
-                            type="submit"
-                            name="delete"
-                            class="button-pink bold-paragraph-box margin-left"
-                    >
-                        Delete
-                    </button>
-                </form>
             </div>
+            <form method="POST" enctype="multipart/form-data">
+                <button
+                        type="submit"
+                        name="delete"
+                        class="button-pink bold-paragraph-box margin-left margin-top-left"
+                >
+                    Delete
+                </button>
+            </form>
         </div>
     </div>
     <div class="container-translucent-new-workout margin-top-bottom space-around translate margin-responsive">
@@ -172,8 +173,8 @@ $counter = 0;
             <h2 class="title-box green">New Workout?</h2>
         </div>
         <div class="height_65 center">
-                <form method="POST" class="margin-responsive" enctype="multipart/form-data">
-                    <div class="margin-profile justify-end column" id="actual_exercise">
+                <form method="POST" class="margin-side-form" enctype="multipart/form-data">
+                    <div class="margin-profile justify-end column-form" id="actual_exercise">
                         <input type="text" name="exercise_type" class="input-field margin-profile" placeholder="Exercise Type" required>
                         <input type="text" name="kcal_hour" class="input-field margin-profile" placeholder="kcal per Hour" required>
                         <input type="file" name="img_data" class="margin-profile" accept=".png,.gif,.jpg,.webp" required>
@@ -185,10 +186,9 @@ $counter = 0;
         </div>
     </div>
 </div>
-
 <footer class="padding-footer">
     <hr class="borderline">
-    <div class="flex-row justify-around sm-footer">
+    <div class="flex-row justify-around">
         <h5 class="footer-text">Copyright © 2022    Fitness.Pro.    All rights reserved.</h5>
         <h5 class="footer-text">Portugal</h5>
     </div>

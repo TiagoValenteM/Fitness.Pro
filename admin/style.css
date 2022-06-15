@@ -35,7 +35,7 @@ select:-webkit-autofill:focus {
 /* Container Design */
 .container-translucent-admin-workouts {
   border-radius: 30px;
-  box-shadow: 0px 7px 10px 0px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 7px 10px 0 rgba(0, 0, 0, 0.5);
   width: 450px;
   height: 700px;
   background-color: rgba(247, 31, 106, 0.8);
@@ -44,7 +44,7 @@ select:-webkit-autofill:focus {
 }
 .container-translucent-update-workout {
   border-radius: 30px;
-  box-shadow: 0px 7px 10px 0px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 7px 10px 0 rgba(0, 0, 0, 0.5);
   width: 450px;
   height: 700px;
   background-color: rgba(19, 19, 19, 0.5);
@@ -53,7 +53,7 @@ select:-webkit-autofill:focus {
 }
 .container-translucent-new-workout {
   border-radius: 30px;
-  box-shadow: 0px 7px 10px 0px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 7px 10px 0 rgba(0, 0, 0, 0.5);
   width: 450px;
   height: 450px;
   background-color: rgba(19, 19, 19, 0.5);
@@ -61,160 +61,33 @@ select:-webkit-autofill:focus {
   -webkit-backdrop-filter: blur(6px) brightness(70%);
 }
 
-/* Font style */
-.title-box {
-  font-size: 30px;
-  line-height: 1.05;
-  font-weight: 600;
-  letter-spacing: -0.015em;
-  font-family: SF Pro Display, SF Pro Icons, Helvetica Neue, Helvetica, Arial,
-  sans-serif;
-}
-.headings-box {
-  font-size: 22px;
-  line-height: 1.05;
-  font-weight: 600;
-  letter-spacing: -0.015em;
-  font-family: SF Pro Display, SF Pro Icons, Helvetica Neue, Helvetica, Arial,
-  sans-serif;
-}
-.headings-box-sm {
-  font-size: 19px;
-  line-height: 1.05;
-  font-weight: 600;
-  letter-spacing: -0.015em;
-  font-family: SF Pro Display, SF Pro Icons, Helvetica Neue, Helvetica, Arial,
-  sans-serif;
-}
-.paragraph-box {
-  font-size: 16px;
-  line-height: 1.4705882353;
-  font-weight: 400;
-  letter-spacing: -0.022em;
-  font-family: SF Pro Display, SF Pro Icons, Helvetica Neue, Helvetica, Arial,
-  sans-serif;
-  text-align: justify;
-}
-.paragraph-box-xl {
-  font-size: 16px;
-  line-height: 1.4705882353;
-  font-weight: 550;
-  letter-spacing: -0.022em;
-  font-family: SF Pro Display, SF Pro Icons, Helvetica Neue, Helvetica, Arial,
-  sans-serif;
-}
-.title-main {
-  font-size: 150px;
-  line-height: 1.05;
-  font-weight: 600;
-  letter-spacing: -0.015em;
-  font-family: SF Pro Display, SF Pro Icons, Helvetica Neue, Helvetica, Arial,
-  sans-serif;
-  color: white;
-  text-shadow: 2px 5px 10px rgba(0, 0, 0, 0.5);
-}
-
-/* Colors */
-.pink {
-  color: #f71f6a;
-}
-.blue {
-  color: #04f1d6;
-}
-.green {
-  color: #99fb0b;
-}
-.gray{
-  color: #383938;
-}
-.white {
-  color: #f3f3f3;
-}
-
 /* NavBar Design */
 .navbar-design {
-  display: flex;
-  position: sticky;
-  min-height: 5vh !important;
-  margin-bottom: 3vh;
-  top: 0;
-  z-index: 1030; /* to prevent the navbar getting covered up by other content */
+  background-color: transparent !important;
 }
-.logo-style-admin {
-  font-size: 28px;
-  line-height: 1.05;
-  font-weight: 600;
-  letter-spacing: -0.015em;
-  font-family: SF Pro Display, SF Pro Icons, Helvetica Neue, Helvetica, Arial,
-    sans-serif;
-  color: #99fb0b;
-  padding-top: 1.5vh;
-}
-.margin-left {
-  margin-left: 4%;
-}
-.margin-right {
-  margin-right: 4%;
-}
-.menu-img {
-  outline: none !important;
-  margin-top: 0.5vh;
-  display: block;
-  max-width: 100%;
-  height: auto;
-}
-.flex-row {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-.flex-container{
-  height: 85%;
-  display: flex;
-  align-items: flex-start;
-  flex-direction: column;
-  overflow: hidden;
-}
-.justify-between {
-  justify-content: space-between;
+.logo-style {
+  color: #99fb0b !important;
 }
 
-.dropdown-menu {
-  border-radius: 10px !important;
-  border-style: none !important;
-  margin-top: 2vh !important;
-}
-.dropdown-item,
-.dropdown-item:hover {
-  display: flex !important;
-  justify-content: flex-end !important;
-  margin-right: 1vh !important;
-  color: #131313 !important;
-  background: none !important;
-  line-height: 1.05;
-  font-weight: 550;
-  letter-spacing: -0.015em;
-  font-family: SF Pro Display, SF Pro Icons, Helvetica Neue, Helvetica, Arial,
-    sans-serif;
-}
-.dropdown-item:hover {
-  color: #f71f6a !important;
-}
+/* Footer Design */
 .borderline {
-  display: flex;
-  align-items: center;
   background-color: #f3f3f2;
-  margin-left: 10%;
-  margin-right: 10%;
 }
-button:hover,
-button:focus {
-  outline: none !important;
-  box-shadow: none !important;
+.footer-text {
+  color: #f3f3f2 !important;
+}
+
+/* Placeholder Design */
+::placeholder {
+  color: #f3f3f2;
+  opacity: 1;
+}
+::-ms-input-placeholder {
+  color: #f3f3f2;
 }
 
 .input-field {
-  border-radius: 0%;
+  border-radius: 0;
   border: 0;
   padding: 0;
   background-color: transparent;
@@ -236,10 +109,7 @@ button:focus {
   border-style: none;
   border-radius: 11px !important;
   color: #131313;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  padding-right: 10px;
-  padding-left: 10px;
+  padding: 5px 10px;
   margin-top: 1vh;
 }
 .button-pink {
@@ -247,10 +117,7 @@ button:focus {
   border-style: none;
   border-radius: 11px !important;
   color: #f3f3f2;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  padding-right: 10px;
-  padding-left: 10px;
+  padding: 5px 10px;
   margin-top: 1vh;
 }
 
@@ -259,10 +126,7 @@ button:focus {
   border-style: none;
   border-radius: 11px !important;
   color: #131313;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  padding-right: 10px;
-  padding-left: 10px;
+  padding: 5px 10px;
   margin-top: 1vh;
 }
 .bold-paragraph-box {
@@ -320,18 +184,6 @@ input[type="time"]::-webkit-inner-spin-button,
 input[type="time"]::-webkit-calendar-picker-indicator {
   filter: invert(100%);
 }
-input:focus{
-  outline: none;
-  box-shadow: none;
-}
-
-::placeholder {
-  color: #f3f3f2;
-  opacity: 1;
-}
-::-ms-input-placeholder {
-  color: #f3f3f2;
-}
 
 /* Center Content */
 .center {
@@ -357,24 +209,20 @@ input:focus{
   justify-content: space-between;
   flex-direction: row;
 }
+.wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
 
-.column-center{
+.column-form{
   display: flex;
   flex-direction: column;
-  align-items: center;
+  width: 380px;
 }
-.column{
-  display: flex;
-  flex-direction: column;
-}
-.add-workout-form{
-  display: flex;
-  justify-items: center;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-  margin-top: 30px;
+.margin-add-workout{
+  margin-top: 50px;
 }
 
 .justify-end{
@@ -388,182 +236,27 @@ input:focus{
   flex-wrap: wrap;
   height: 570px;
 }
-.row{
-  display: flex;
-  flex-direction: row;
-}
-.row-space-between{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-.row-space-around{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-}
 .row-space-around-100{
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  align-items: center;
   width: 100%;
 }
-.column-space-around-100{
+
+.margin-top-left{
+  margin-top: 100px;
+  margin-left: 30px !important;
+}
+.height_400{
   display: flex;
+  align-items: center;
+  justify-content: center;
   flex-direction: column;
-  justify-content: space-around;
-  width: 70%;
-}
-
-
-.margin-top-bottom {
-  margin-bottom: 30px;
-  margin-top: 30px;
-}
-.margin-profile {
-  margin-bottom: 15px;
-  margin-top: 15px;
-}
-.margin-profile-side {
-  margin-left: 15px;
-  margin-right: 15px;
-}
-.margin-responsive {
-  margin-left: 13px;
-  margin-right: 13px;
-}
-.margin-icons{
-  margin: 8px;
-}
-.margin-heading-container{
-  padding-top: 60px;
-}
-.margin-paragraph-container{
-  margin-top: 5px;
-}
-.margin-activity {
-  margin-bottom: 8px;
-  margin-top: 8px;
-}
-.margin-activity-md {
-  margin-bottom: 10px;
-  margin-top: 10px;
-}
-
-.padding-50{
-  padding-top: 50px;
-}
-/* Container Design */
-.profile-img {
-  border-top-left-radius:30px ;
-  border-top-right-radius: 30px;
-  width: 100%;
-  max-height: 50%;
-}
-
-.icon-size-xl {
-  height: 90px;
-  width: 90px;
-  transition-duration: 0.5s;
-}
-.icon-size-xl:hover{
-  height: 110px;
-  width: 110px;
-  transition-duration: 0.5s;
-}
-
-.icon-size-md {
-  height: 70px;
-  width: 70px;
-  transition-duration: 0.5s;
-}
-.icon-size-md:hover{
-  height: 110px;
-  width: 110px;
-  transition-duration: 0.5s;
-}
-.icon-size-sm {
-  height: 50px;
-  width: 50px;
-  transition-duration: 0.5s;
-}
-.icon-size-sm:hover{
-  height: 110px;
-  width: 110px;
-  transition-duration: 0.5s;
-}
-.icon-size-xs {
-  height: 20px;
-  width: 20px;
-}
-
-.icon-size-md-form {
-  height: 60px;
-  width: 60px;
-  transition-duration: 0.5s;
-}
-.icon-size-md-form:hover{
-  height: 70px;
-  width: 70px;
-  transition-duration: 0.5s;
-}
-
-.icon-size-md-activity {
-  height: 70px;
-  width: 70px;
-}
-/* Display */
-.height_full{
-  height: 100%;
-}
-.height_90{
-  height: 90%;
+  height: 400px;
 }
 .height_65{
   height: 65%;
   margin-bottom: 50px;
-}
-.width-350{
-  width: 350px
-}
-.width-200{
-  width: 250px;
-}
-
-.hidden{
-  display: none;
-}
-.overflow-y{
-  overflow-y: auto;
-  overflow-x: hidden;
-}
-/* Margins & Paddings */
-.ex-margins {
-  padding: 10px;
-}
-.ex-txt-padding {
-  padding-top: 10px;
-}
-
-.padding-list-icon{
-  margin-left: 8px;
-}
-.justify-around {
-  justify-content: space-around;
-}
-.padding-footer {
-  padding-top: 4vh;
-  padding-bottom: 1.5vh;
-}
-.footer-text {
-  font-size: 11px;
-  line-height: 1.05;
-  font-weight: 500;
-  letter-spacing: -0.015em;
-  font-family: SF Pro Display, SF Pro Icons, Helvetica Neue, Helvetica, Arial,
-  sans-serif;
-  color: #f3f3f2;
 }
 
 /* Animations */
@@ -599,65 +292,84 @@ input:focus{
 }
 
 /* Media Queries */
-@media screen and (max-width: 1300px) {
-  .container-translucent-each-activity {
-    width: 320px;
-  }
-}
 @media screen and (max-width: 1024px) {
-  .container-translucent-health {
-    width: 400px;
-    height: 400px;
-  }
   .flex-row{
     flex-wrap: wrap;
   }
-  .mobile-menu{
-    display: none !important;
-  }
-}
-@media screen and (max-width: 990px) {
-  .container-translucent-health {
-    width: 400px;
-    height: 350px;
-  }
-  .flex-row{
-    flex-wrap: wrap;
-  }
-  .mobile-menu{
-    display: none !important;
-  }
-  .container-translucent-profile {
-    width: 400px;
-    height: 750px;
-  }
-  .container-translucent-workouts {
-    width: 600px;
-  }
-  .container-translucent-activity {
-    width: 600px;
-  }
-  .container-translucent-each-activity {
-    width: 550px;
-  }
-
 }
 @media screen and (max-width: 640px) {
-  .container-translucent-health {
+  .container-translucent-update-workout {
+    width: 450px;
+  }
+  .container-translucent-new-workout {
+    width: 450px;
+  }
+  .container-translucent-admin-workouts {
+    width: 450px;
+  }
+  .column-form{
+    width: 380px;
+  }
+  .icon-size-md-form {
+    height: 60px;
+    width: 60px;
+    transition-duration: 0.5s;
+  }
+  .icon-size-md-form:hover{
+    height: 65px;
+    width: 65px;
+    transition-duration: 0.5s;
+  }
+  .icon-size-xl {
+    height: 70px;
+    width: 70px;
+    transition-duration: 0.5s;
+  }
+  .icon-size-xl:hover{
+    height: 80px;
+    width: 80px;
+    transition-duration: 0.5s;
+  }
+  .icon-size-md {
+    height: 60px;
+    width: 60px;
+    transition-duration: 0.5s;
+  }
+  .icon-size-md:hover{
+    height: 80px;
+    width: 80px;
+    transition-duration: 0.5s;
+  }
+  .icon-size-sm {
+    height: 50px;
+    width: 50px;
+    transition-duration: 0.5s;
+  }
+  .icon-size-sm:hover{
+    height: 80px;
+    width: 80px;
+    transition-duration: 0.5s;
+  }
+  .icon-size-xs {
+    height: 25px;
+    width: 25px;
+  }
+  .row-space-around-100{
+     width: 450px;
+   }
+}
+@media screen and (max-width: 500px) {
+  .container-translucent-update-workout {
+    width: 380px;
+  }
+  .container-translucent-new-workout {
+    width: 380px;
+  }
+  .container-translucent-admin-workouts {
+    width: 380px;
+  }
+  .column-form{
     width: 300px;
-    height: 350px;
-  }
-  .container-translucent-profile {
-    height: 670px;
-  }
-  .flex-row{
-    flex-wrap: wrap;
-  }
-  .nav-desktop{
-    display: none !important;
-  }
-  .mobile-menu{
-    display: flex !important;
   }
   .icon-size-md-form {
     height: 50px;
@@ -669,10 +381,6 @@ input:focus{
     width: 55px;
     transition-duration: 0.5s;
   }
-  .container-translucent-workouts {
-    height: 550px;
-    min-width: 320px;
-  }
   .icon-size-xl {
     height: 60px;
     width: 60px;
@@ -683,7 +391,6 @@ input:focus{
     width: 70px;
     transition-duration: 0.5s;
   }
-
   .icon-size-md {
     height: 50px;
     width: 50px;
@@ -705,152 +412,113 @@ input:focus{
     transition-duration: 0.5s;
   }
   .icon-size-xs {
-    height: 25px;
-    width: 25px;
+    height: 21px;
+    width: 21px;
   }
   .row-space-around-100{
-     width: 300px;
-   }
-  .container-translucent-each-activity {
-    max-width: 320px;
-  }
-  .row-space-between{
-    flex-wrap: wrap;
-    justify-content: space-around;
-    padding-top: 12px;
+    width: 350px;
   }
 }
 @media screen and (max-width: 400px) {
-  .container-translucent-health {
-    width: 250px;
-    height: 350px;
+  .container-translucent-update-workout {
+    width: 320px;
   }
-  .flex-row{
-    flex-wrap: wrap;
+  .container-translucent-new-workout {
+    width: 320px;
   }
-  .mobile-menu{
-    display: flex !important;
+  .container-translucent-admin-workouts {
+    width: 320px;
   }
-  .container-translucent-profile {
-    height: 670px;
-  }
-  .container-translucent-workouts {
-    height: 550px;
-    min-width: 320px;
+  .column-form{
+    width: 280px;
   }
   .icon-size-xl {
-    height: 60px;
-    width: 60px;
+    height: 56px;
+    width: 56px;
     transition-duration: 0.5s;
   }
   .icon-size-xl:hover{
-    height: 70px;
-    width: 70px;
+    height: 66px;
+    width: 66px;
     transition-duration: 0.5s;
   }
-
   .icon-size-md {
-    height: 50px;
-    width: 50px;
+    height: 46px;
+    width: 46px;
     transition-duration: 0.5s;
   }
   .icon-size-md:hover{
-    height: 70px;
-    width: 70px;
+    height: 66px;
+    width: 66px;
     transition-duration: 0.5s;
   }
   .icon-size-sm {
-    height: 40px;
-    width: 40px;
+    height: 36px;
+    width: 36px;
     transition-duration: 0.5s;
   }
   .icon-size-sm:hover{
-    height: 70px;
-    width: 70px;
+    height: 66px;
+    width: 66px;
     transition-duration: 0.5s;
   }
   .icon-size-xs {
-    height: 25px;
-    width: 25px;
-  }
-  .row-space-around-100{
-    width: 240px;
-  }
-  .container-translucent-each-activity {
-    max-width: 270px;
-  }
-  .row-space-between{
-    flex-wrap: wrap;
-    justify-content: space-around;
-    padding-top: 12px;
+    height: 18px;
+    width: 18px;
   }
 }
 @media screen and (max-width: 300px) {
-  .container-translucent-health {
-    width: 250px;
-    height: 350px;
+  .container-translucent-update-workout {
+    width: 260px;
   }
-  .sm-footer{
-    display: none;
+  .container-translucent-new-workout {
+    width: 260px;
   }
-  .flex-row{
-    flex-wrap: wrap;
+  .container-translucent-admin-workouts {
+    width: 260px;
   }
-  .mobile-menu{
-    display: flex !important;
-  }
-  .container-translucent-profile {
-    height: 550px;
-  }
-  .container-translucent-workouts {
-    min-width: 250px;
-    height: 500px;
-
+  .column-form{
+    width: 180px;
   }
   .icon-size-xl {
-    height: 40px;
-    width: 40px;
+    height: 37px;
+    width: 37px;
     transition-duration: 0.5s;
   }
   .icon-size-xl:hover{
-    height: 50px;
-    width: 50px;
+    height: 45px;
+    width: 45px;
     transition-duration: 0.5s;
   }
-
   .icon-size-md {
-    height: 40px;
-    width: 40px;
+    height: 37px;
+    width: 37px;
     transition-duration: 0.5s;
   }
   .icon-size-md:hover{
-    height: 50px;
-    width: 50px;
+    height: 45px;
+    width: 45px;
     transition-duration: 0.5s;
   }
   .icon-size-sm {
-    height: 30px;
-    width: 30px;
+    height: 27px;
+    width: 27px;
     transition-duration: 0.5s;
   }
   .icon-size-sm:hover{
-    height: 50px;
-    width: 50px;
+    height: 45px;
+    width: 45px;
     transition-duration: 0.5s;
   }
   .icon-size-xs {
-    height: 20px;
-    width: 20px;
+    height: 14px;
+    width: 14px;
   }
-  .row-space-around-100{
-    width: 210px;
+  .img-responsive{
+    display: none;
   }
-  .container-translucent-each-activity {
-    max-width: 200px;
-  }
-  .row-space-between{
-    flex-wrap: wrap;
-    justify-content: space-around;
-    padding-top: 12px;
+  .wrap{
+    margin-top: 50px;
+    padding: 0 50%;
   }
 }
