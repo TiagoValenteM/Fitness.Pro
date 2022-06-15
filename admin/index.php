@@ -131,7 +131,7 @@ $counter = 0;
     </div>
     <div class="container-translucent-update-workout margin-top-bottom fade-in hidden margin-responsive relative" id="close_box" >
         <div class="margin-add-workout">
-            <div class="margin-profile row-space-around-100" id="add-workout-header"></div>
+            <div class="margin-profile row-around-100" id="add-workout-header"></div>
             <div class="height_400">
                 <form method="POST" class="margin-side-form" enctype="multipart/form-data">
                     <div class="margin-profile justify-end column-form" id="actual_exercise">
@@ -141,7 +141,7 @@ $counter = 0;
                         <div class="flex-row justify-end">
                             <button
                                     type="button"
-                                    class="button-return bold-paragraph-box"
+                                    class="button-blue bold-paragraph-box"
                                     id="return_icon"
                             >
                                 Cancel
@@ -179,7 +179,7 @@ $counter = 0;
                         <input type="text" name="kcal_hour" class="input-field margin-profile" placeholder="kcal per Hour" required>
                         <input type="file" name="img_data" class="margin-profile" accept=".png,.gif,.jpg,.webp" required>
                         <div class="flex-row justify-end">
-                            <input type="submit" name="new_workout" class="button-return bold-paragraph-box" value="New Workout">
+                            <input type="submit" name="new_workout" class="button-blue bold-paragraph-box" value="New Workout">
                         </div>
                     </div>
                 </form>
