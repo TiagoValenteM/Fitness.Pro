@@ -5,13 +5,15 @@ body {
   height: 100%;
   margin: 0;
   padding: 0;
+  overscroll-behavior: contain;
   overflow-y: auto;
   overflow-x: hidden;
-  background-color: #f3f3f2 !important;
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-  url(../img/background/background_admin.jpeg)
-  no-repeat center center fixed ;
-  background-size: contain;
+  -webkit-overflow-scrolling: touch;
+  background-color: #797979 !important;
+  background: no-repeat center center fixed ;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+  url(../img/background/background_admin.jpeg);
+  background-size: cover;
   font-family: SF Pro Display, SF Pro Icons, Helvetica Neue, Helvetica, Arial,
   sans-serif;
 }
@@ -31,35 +33,7 @@ select:-webkit-autofill:focus {
 }
 
 /* Container Design */
-.container-translucent-profile {
-  border-radius: 30px;
-  box-shadow: 0px 7px 10px 0px rgba(0, 0, 0, 0.5);
-  width: 370px;
-  height: 700px;
-  background-color: rgba(153, 251, 11, 0.8);
-  backdrop-filter: blur(6px) brightness(70%);
-  -webkit-backdrop-filter: blur(6px) brightness(70%);
-}
-.container-translucent-activity {
-  border-radius: 30px;
-  box-shadow: 0px 7px 10px 0px rgba(0, 0, 0, 0.5);
-  width: 420px;
-  height: 700px;
-  background-color: rgba(4, 241, 214, 0.8);
-  backdrop-filter: blur(6px) brightness(70%);
-  -webkit-backdrop-filter: blur(6px) brightness(70%);
-}
-
-.container-translucent-health {
-  border-radius: 30px;
-  box-shadow: 0px 7px 10px 0px rgba(0, 0, 0, 0.5);
-  width: 700px;
-  height: 400px;
-  background-color: rgba(19, 19, 19, 0.5);
-  backdrop-filter: blur(6px) brightness(70%);
-  -webkit-backdrop-filter: blur(6px) brightness(70%);
-}
-.container-translucent-workouts {
+.container-translucent-admin-workouts {
   border-radius: 30px;
   box-shadow: 0px 7px 10px 0px rgba(0, 0, 0, 0.5);
   width: 450px;
@@ -68,7 +42,7 @@ select:-webkit-autofill:focus {
   backdrop-filter: blur(6px) brightness(70%);
   -webkit-backdrop-filter: blur(6px) brightness(70%);
 }
-.container-translucent-form {
+.container-translucent-update-workout {
   border-radius: 30px;
   box-shadow: 0px 7px 10px 0px rgba(0, 0, 0, 0.5);
   width: 450px;
@@ -77,13 +51,14 @@ select:-webkit-autofill:focus {
   backdrop-filter: blur(6px) brightness(70%);
   -webkit-backdrop-filter: blur(6px) brightness(70%);
 }
-.container-translucent-each-activity {
+.container-translucent-new-workout {
   border-radius: 30px;
   box-shadow: 0px 7px 10px 0px rgba(0, 0, 0, 0.5);
-  width: 380px;
+  width: 450px;
+  height: 450px;
   background-color: rgba(19, 19, 19, 0.5);
-}
-.container-translucent-each-activity:hover .icon-size-md-form{width: 70px;height: 70px}.container-translucent-each-activity:hover{background-color: rgba(19, 19, 19, 0.7);} {
+  backdrop-filter: blur(6px) brightness(70%);
+  -webkit-backdrop-filter: blur(6px) brightness(70%);
 }
 
 /* Font style */
@@ -128,6 +103,16 @@ select:-webkit-autofill:focus {
   font-family: SF Pro Display, SF Pro Icons, Helvetica Neue, Helvetica, Arial,
   sans-serif;
 }
+.title-main {
+  font-size: 150px;
+  line-height: 1.05;
+  font-weight: 600;
+  letter-spacing: -0.015em;
+  font-family: SF Pro Display, SF Pro Icons, Helvetica Neue, Helvetica, Arial,
+  sans-serif;
+  color: white;
+  text-shadow: 2px 5px 10px rgba(0, 0, 0, 0.5);
+}
 
 /* Colors */
 .pink {
@@ -147,7 +132,6 @@ select:-webkit-autofill:focus {
 }
 
 /* NavBar Design */
-
 .navbar-design {
   display: flex;
   position: sticky;
@@ -258,6 +242,17 @@ button:focus {
   padding-left: 10px;
   margin-top: 1vh;
 }
+.button-pink {
+  background-color: #f71f6a;
+  border-style: none;
+  border-radius: 11px !important;
+  color: #f3f3f2;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-right: 10px;
+  padding-left: 10px;
+  margin-top: 1vh;
+}
 
 .button-return {
   background-color: #04f1d6;
@@ -330,6 +325,14 @@ input:focus{
   box-shadow: none;
 }
 
+::placeholder {
+  color: #f3f3f2;
+  opacity: 1;
+}
+::-ms-input-placeholder {
+  color: #f3f3f2;
+}
+
 /* Center Content */
 .center {
   display: flex;
@@ -378,7 +381,9 @@ input:focus{
   display: flex;
   justify-content: end;
 }
-
+.relative{
+  position: relative;
+}
 .wrap-570{
   flex-wrap: wrap;
   height: 570px;
@@ -515,6 +520,10 @@ input:focus{
 .height_90{
   height: 90%;
 }
+.height_65{
+  height: 65%;
+  margin-bottom: 50px;
+}
 .width-350{
   width: 350px
 }
@@ -557,6 +566,7 @@ input:focus{
   color: #f3f3f2;
 }
 
+/* Animations */
 .fade-in {
   animation: fadeIn 0.7s;
   -webkit-animation: fadeIn 0.7s;
@@ -569,7 +579,6 @@ input:focus{
   0% {opacity:0;}
   100% {opacity:1;}
 }
-
 .translate {
   animation: slide;
   -webkit-animation: slide;
@@ -589,32 +598,7 @@ input:focus{
   }
 }
 
-.scrollbar {
-  -ms-overflow-style: none;  /* Internet Explorer 10+ */
-  scrollbar-width: none;  /* Firefox */
-}
-.scrollbar::-webkit-scrollbar {
-  display: none;  /* Safari and Chrome */
-}
-
-@media screen and (min-width: 1920px) {
-  .container-translucent-health {
-    width: 700px;
-    height: 400px;
-  }
-  .mobile-menu{
-    display: none !important;
-  }
-}
-@media screen and (max-width: 1919px) {
-  .container-translucent-health {
-    width: 600px;
-    height: 360px;
-  }
-  .mobile-menu{
-    display: none !important;
-  }
-}
+/* Media Queries */
 @media screen and (max-width: 1300px) {
   .container-translucent-each-activity {
     width: 320px;

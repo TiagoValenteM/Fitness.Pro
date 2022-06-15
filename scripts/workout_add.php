@@ -18,7 +18,7 @@ if (isset($_POST["submit"]) && isset($_COOKIE['exercise_id']))  {
     $place = $_REQUEST["place"];
     $date_done = $_REQUEST["date_done"];
     $total_time = $_REQUEST["total_time"];
-    $total_time_hours = (int) date("h",strtotime($total_time)) +( (int) date("i", strtotime($total_time)))/60;
+    $total_time_hours = (int) date("H",strtotime($total_time)) +( (int) date("i", strtotime($total_time))/60);
     $total_kcal = $total_time_hours*$exercise_fetch["kcal_hour"];
     // inserting information
     $exercise_insert = ("INSERT INTO exercises (`exercise_id`,`status`,`place`,`people`,`date_done`,`total_time`,`total_kcal`,`user_id`) VALUES ('$exercise_id','$status','$place','$people','$date_done','$total_time','$total_kcal','$id')");

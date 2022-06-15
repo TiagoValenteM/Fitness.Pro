@@ -94,11 +94,11 @@ if (isset($_SESSION['user'])) {
                 </button>
                 </div>
                 </div>
-                <div class="align-right">
+                <div class="align-left">
                   <?php if (isset($_SESSION['errorMessage'])) {
                       // if session has error message, then it should print an error message
                       unset($_SESSION['errorMessage']);
-                      echo "<span class='error-texts'>Invalid username or password.</span>";
+                      echo "<span class='error-text'>Invalid username or password.</span>";
                   } ?>
                 </div>
               </form>
@@ -204,15 +204,15 @@ if (isset($_SESSION['user'])) {
                   </button>
               </div>
                   
-                  <div class="align-right">
+                  <div class="align-left">
                   <?php if (isset($_SESSION['registerError'])) {
                       // if session has error message, then it should print an error message
-                      echo "<span class='error-texts'>" .
+                      echo "<span class='error-text'>" .
                           $_SESSION['registerError'] .
                           '</span>';
                       unset($_SESSION['registerError']);
                   } elseif (isset($_SESSION['successMessage'])) {
-                      echo "<span class='success-texts'>" .
+                      echo "<span class='success-text'>" .
                           $_SESSION['successMessage'] .
                           '</span>';
                       unset($_SESSION['successMessage']);

@@ -25,12 +25,10 @@ $counter = 0;
     <meta name="viewport" content="viewport-fit=cover, initial-scale=1.0" />
     <link rel="icon" type="imagem/png" href="favicon.ico" />
     <link rel="stylesheet" href="./style.css" />
-    <link href="https://unpkg.com/filepond@^4/dist/filepond.css" rel="stylesheet" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://unpkg.com/filepond@^4/dist/filepond.js"></script>
     <script src="js/script.js"></script>
     <title>Profile - Fitness.Pro</title>
 </head>
@@ -52,10 +50,11 @@ $counter = 0;
         </div>
     </div>
 </nav>
-<div class="flex-row">
-    <div class="container-translucent-workouts margin-top-bottom space-around translate margin-responsive" id="open_box">
+<div class="flex-row space-around margin-responsive">
+    <div class="container-translucent-admin-workouts margin-top-bottom space-around translate margin-responsive" id="open_box">
         <div class="center margin-heading-container">
-            <h2 class="title-box blue">Workouts</h2>
+            <h2 class="title-box blue">Available Workouts</h2>
+            <h4 class="bold-paragraph-box white margin-paragraph-container">(Click in an icon to update a workout)</h4>
         </div>
         <div class="center height_full">
             <div class="flex-row center">
@@ -129,73 +128,61 @@ $counter = 0;
             </div>
         </div>
     </div>
-    <div class="container-translucent-form margin-top-bottom fade-in hidden margin-responsive" id="close_box" >
+    <div class="container-translucent-update-workout margin-top-bottom fade-in hidden margin-responsive relative" id="close_box" >
         <div class="add-workout-form">
-            <div class="margin-profile row-space-around-100 column" id="add-workout-header">
-            </div>
-            <form method="POST" class="column-space-around-100" enctype="multipart/form-data">
-                <div class="margin-profile justify-end column" id="actual_exercise">
-                    <input type="text" name="exercise_type" class="input-field margin-profile" placeholder="Exercise Type">
-                    <input type="text" name="kcal_hour" class="input-field margin-profile" placeholder="Kcal per Hour">
-                    <input type="file" name="img_data" id="img_data" class="margin-profile hidden" accept=".png,.gif,.jpg,.webp">
-                    <input type="file" class="margin-profile my-pond" accept=".png,.gif,.jpg,.webp">
-                    <div class="flex-row">
-                        <button
-                                type="button"
-                                class="button-return bold-paragraph-box"
-                                id="return_icon"
-                        >
-                            Cancel
-                        </button>
-                        <button
-                                type="submit"
-                                name="modify"
-                                class="button-green bold-paragraph-box margin-left"
-                        >
-                            Update
-                        </button>
+            <div class="margin-profile row-space-around-100 column" id="add-workout-header"></div>
+            <div class="height_65 center">
+                <form method="POST" class="margin-responsive" enctype="multipart/form-data">
+                    <div class="margin-profile justify-end column" id="actual_exercise">
+                        <input type="text" name="exercise_type" class="input-field margin-profile" placeholder="Exercise Type" required>
+                        <input type="text" name="kcal_hour" class="input-field margin-profile" placeholder="Kcal per Hour" required>
+                        <input type="file" name="img_data" id="img_data" class="margin-profile" accept=".png,.gif,.jpg,.webp" required>
+                        <div class="flex-row justify-end">
+                            <button
+                                    type="button"
+                                    class="button-return bold-paragraph-box"
+                                    id="return_icon"
+                            >
+                                Cancel
+                            </button>
+                            <button
+                                    type="submit"
+                                    name="modify"
+                                    class="button-green bold-paragraph-box margin-left"
+                            >
+                                Update
+                            </button>
+                        </div>
                     </div>
-
-                    <!-- include FilePond library -->
-                    <script src="https://unpkg.com/filepond/dist/filepond.min.js"></script>
-
-                    <!-- include FilePond jQuery adapter -->
-                    <script src="https://unpkg.com/jquery-filepond/filepond.jquery.js"></script>
-
-                    <script>
-                        $(function(){
-
-                            // Turn input element into a pond
-                            $('.my-pond').filepond();
-
-                            // Listen for addfile event
-                            $('.my-pond').on('FilePond:addfile', function(e) {
-                                console.log('file added event', e.detail.file);
-                                $('#img_data').file(e.detail.file)
-                                console.log($('#img_data').files)
-                            });
-                        });
-                    </script>
-                </div>
-            </form>
-            <form method="POST"  enctype="multipart/form-data">
-            <button
-                    type="submit"
-                    name="delete"
-                    class="button-green bold-paragraph-box margin-left"
-            >
-                Delete
-            </button>
-            </form>
+                </form>
+                <form method="POST"  style="position: absolute; margin-top: 164px; margin-right: 53px" enctype="multipart/form-data">
+                    <button
+                            type="submit"
+                            name="delete"
+                            class="button-pink bold-paragraph-box margin-left"
+                    >
+                        Delete
+                    </button>
+                </form>
+            </div>
         </div>
     </div>
-    <div>
-        <form class="column" method="POST" enctype="multipart/form-data">
-            <input type="text" name="exercise_type" placeholder="Name the exercise" required>
-            <input type="text" name="kcal_hour" placeholder="kcal per hour" required>
-            <input type="file" name="img_data" accept=".png,.gif,.jpg,.webp" required>
-            <input type="submit" name="new_workout" value="New Workout">
-        </form>
+    <div class="container-translucent-new-workout margin-top-bottom space-around translate margin-responsive">
+        <div class="center margin-heading-container">
+            <h2 class="title-box green">New Workout?</h2>
+        </div>
+        <div class="height_65 center">
+                <form method="POST" class="margin-responsive" enctype="multipart/form-data">
+                    <div class="margin-profile justify-end column" id="actual_exercise">
+                        <input type="text" name="exercise_type" class="input-field margin-profile" placeholder="Exercise Type" required>
+                        <input type="text" name="kcal_hour" class="input-field margin-profile" placeholder="kcal per Hour" required>
+                        <input type="file" name="img_data" class="margin-profile" accept=".png,.gif,.jpg,.webp" required>
+                        <div class="flex-row justify-end">
+                            <input type="submit" name="new_workout" class="button-return bold-paragraph-box" value="New Workout">
+                        </div>
+                    </div>
+                </form>
+        </div>
     </div>
 </div>
 
