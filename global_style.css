@@ -239,6 +239,30 @@ input:focus{
     outline: none;
     border-bottom: 2px solid #04f1d6;
 }
+input[type="radio"] {
+    appearance: none;
+    border-radius: 50%;
+    transition-duration: 0.5s;
+    height: 19px;
+    width: 19px;
+    background-color: #383938;
+    border: 3px solid #99fb0b;
+}
+input[type="radio"]:hover {
+    border: 3px solid #f71f6a;
+}
+input[type="radio"]:checked {
+    background-color: #f71f6a;
+    border: 0;
+}
+input[type="date"]::-webkit-inner-spin-button,
+input[type="date"]::-webkit-calendar-picker-indicator {
+    filter: invert(100%);
+}
+input[type="time"]::-webkit-inner-spin-button,
+input[type="time"]::-webkit-calendar-picker-indicator {
+    filter: invert(100%);
+}
 
 /* Hidden Content */
 .hidden{
@@ -426,9 +450,6 @@ input:focus{
 .justify-end{
     display: flex;
     justify-content: end;
-}
-.justify-around {
-    justify-content: space-around;
 }
 .row-space-between{
     display: flex;

@@ -276,7 +276,7 @@ $count_user = 0;
                         <div class="margin-profile justify-end">
                             <button
                                     type="button"
-                                    class="button-return bold-paragraph-box"
+                                    class="button-blue bold-paragraph-box"
                                     id="return_icon"
                             >
                                 Cancel
