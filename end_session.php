@@ -18,7 +18,7 @@ function remove_all_cookies() {
 if (isset($_SESSION['user'])) {
     remove_all_cookies();
     unset($_SESSION['user']);
-    header('location: sign');
+    header('location: index');
     exit();
 }
 ?>

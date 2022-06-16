@@ -40,7 +40,7 @@ function failed()
 {
     // set error message in session variable to display on the page
     $_SESSION['errorMessage'] = true;
-    header('location:../sign'); // redirect
+    header('location: ../index'); // redirect
 }
 
 function successful()
