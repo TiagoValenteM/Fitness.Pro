@@ -79,12 +79,6 @@ body {
 }
 
 /* Profile Photo */
-.profile-img {
-  border-top-left-radius:30px ;
-  border-top-right-radius: 30px;
-  width: 100%;
-  max-height: 50%;
-}
 .friends-photo-xl{
   border-radius:50% ;
   width: 250px;
@@ -127,16 +121,120 @@ body {
   padding: 18px;
   box-shadow: 0 7px 10px 0 rgba(0, 0, 0, 0.5);
 }
+.message_content{
+  margin-left: 10%;
+  margin-right: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 10px
+}
 
-@media screen and (max-width: 1300px) {
-}
-@media screen and (max-width: 1024px) {
-}
-@media screen and (max-width: 990px) {
-}
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 500px) {
+  .container-translucent-each-friend{
+    width: 325px;
+  }
+  .friends-photo-md {
+    width: 70px;
+    margin: 10px 0;
+  }
+  .container-translucent-each-friend:hover .friends-photo-md{width: 80px;}
+  .container-translucent-message {
+    width: 325px;
+  }
+  .container-translucent-message:hover .friends-photo-sm{width: 60px;}
+  .container-translucent-social-activities {
+    width: 325px;
+    max-height: 250px;
+  }
+  .icon-size-md-form{
+    margin: 7px 0;
+  }
+  .container-translucent-social-activities:hover .icon-size-md-form{width: 35px;height: 35px}
+  .row-space-between{
+    flex-wrap: wrap;
+    padding-top: 7px !important;
+    padding-bottom: 7px !important;
+    width: 300px;
+  }
 }
 @media screen and (max-width: 400px) {
+  .container-translucent-each-friend{
+    width: 270px;
+  }
+  .friends-photo-md {
+    width: 70px;
+    margin: 10px 0;
+  }
+  .container-translucent-each-friend:hover .friends-photo-md{width: 80px;}
+  .container-translucent-message {
+    width: 270px;
+  }
+  .container-translucent-message:hover .friends-photo-sm{width: 60px;}
+  .container-translucent-social-activities {
+    width: 270px;
+    max-height: 260px;
+  }
+  .icon-size-md-form{
+    margin: 7px 0;
+  }
+  .container-translucent-social-activities:hover .icon-size-md-form{width: 35px;height: 35px}
+  .row-space-between{
+    width: 250px;
+  }
+  .message-area{
+    width: 240px;
+  }
+  .friends-photo-xl{
+    width: 230px;
+  }
+  .padding-sides{
+    padding-right: 25px !important;
+    padding-left: 25px !important;
+  }
+  .mobile-text{
+    padding-right: 25px;
+    padding-left: 25px;
+  }
+  .back-to-me-align-end{
+    margin-left: 82%;
+  }
 }
 @media screen and (max-width: 300px) {
+  .container-translucent-each-friend{
+    width: 200px;
+  }
+  .friends-photo-md {
+    width: 70px;
+    margin: 10px 0;
+  }
+  .container-translucent-each-friend:hover .friends-photo-md{width: 80px;}
+  .container-translucent-message {
+    width: 200px;
+  }
+  .container-translucent-message:hover .friends-photo-sm{width: 60px;}
+  .container-translucent-social-activities {
+    width: 200px;
+    max-height: 330px;
+  }
+  .icon-size-md-form{
+    margin: 7px 0;
+  }
+  .container-translucent-social-activities:hover .icon-size-md-form{width: 35px;height: 35px}
+  .row-space-between{
+    width: 180px;
+  }
+  .message-area{
+    width: 200px;
+  }
+  .friends-photo-xl{
+    width: 180px;
+  }
+  .padding-sides{
+    padding-right: 10px !important;
+    padding-left: 10px !important;
+  }
+  .back-to-me-align-end{
+    margin-left: 75%;
+  }
 }

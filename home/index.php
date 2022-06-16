@@ -81,7 +81,7 @@ $count_user = 0;
             <img class="friends-photo-xl translate-resize" src="data:image/jpg;base64,<?php echo base64_encode(getUserPhotoById($link, $_COOKIE['selected_user_id'])); ?>"  alt=""/>
             <div class="margin-profile">
                 <div class="center">
-                    <br><span class='title-box gray'><?php echo getUsernameById($link, $_COOKIE['selected_user_id']); ?></span>
+                    <br><span class='title-box gray mobile-text'><?php echo getUsernameById($link, $_COOKIE['selected_user_id']); ?></span>
                     <?php if (getUserGenderById($link,$_COOKIE['selected_user_id']) == 'm'){ ?>
                         <span class='paragraph-box gray margin-paragraph-container'><?php echo "(Male)" ?></span>
                     <?php } elseif (getUserGenderById($link,$_COOKIE['selected_user_id']) == 'f'){ ?>
@@ -134,12 +134,12 @@ $count_user = 0;
                                 </div>
                                 <div class="center margin-activity-md">
                                     <form action="" method="POST">
-                                        <input style='display: none' name="post_to_like" value='<?php echo $m['post_id'] ?>'>
+                                        <input class="hidden" name="post_to_like" value='<?php echo $m['post_id'] ?>'>
                                         <button type="submit" name='like' class="button-like" title="Like">
                                     </form>
                                 </div>
                             </div>
-                            <div style="margin-left: 10%;margin-right: 10%; display: flex; justify-content: center; align-items: center; padding-bottom: 10px">
+                            <div class="message_content">
                                 <span class="paragraph-box white"><?php echo $m['content'] ?></span>
                             </div>
                         </div>
@@ -148,8 +148,8 @@ $count_user = 0;
     </div>
     <div class="container-translucent-friends center margin-top-bottom translate margin-responsive overflow-y scrollbar">
         <div class="center padding-50">
-            <h2 class="title-box pink">People you may know</h2>
-            <h4 class="bold-paragraph-box gray margin-paragraph-container">(To access a person's profile, click on their name)</h4>
+            <h2 class="title-box pink mobile-text">People you may know</h2>
+            <h4 class="bold-paragraph-box gray margin-paragraph-container mobile-text">(To access a person's profile, click on their name)</h4>
         </div>
         <div  class="wrap-friends" >
             <?php while($row = mysqli_fetch_assoc($users)) {
@@ -165,10 +165,10 @@ $count_user = 0;
                                 $userFriend = $row['id'];
                                 $isFollowed = isFollowedBy($id, $userFriend, $friends_follow);
                                 if ($isFollowed) {
-                                    echo "<input style='display: none' type='text' name='user_to_unfollow' value='$userFriend' />
+                                    echo "<input class='hidden' type='text' name='user_to_unfollow' value='$userFriend' />
                                      <button type='submit' name='unfollow' class='button-pink bold-paragraph-box-button'>Unfollow</button>";
                                 } else {
-                                    echo "<input style='display: none' type='text' name='user_to_follow' value='$userFriend' />
+                                    echo "<input class='hidden' type='text' name='user_to_follow' value='$userFriend' />
                                     <button type='submit' name='follow' class='button-green bold-paragraph-box'>Follow</button>";
                                 }
                                 ?>
