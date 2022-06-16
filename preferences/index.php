@@ -22,11 +22,8 @@ if ($data['user_type'] == 'admin') {
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="viewport-fit=cover, initial-scale=1.0" />
         <link rel="icon" type="imagem/png" href="favicon.ico" />
+        <link rel="stylesheet" href="../global_style.css" />
         <link rel="stylesheet" href="./style.css" />
-        <link
-                rel="stylesheet"
-                href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
-        />
         <link
                 rel="stylesheet"
                 href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
