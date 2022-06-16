@@ -40,13 +40,11 @@ $count_weight = 0;
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="viewport-fit=cover, initial-scale=1.0" />
-    <link rel="icon" type="imagem/png" href="favicon.ico" />
-    <link rel="stylesheet" href="./style.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
-    />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="icon" type="imagem/png" href="favicon.ico" />
+        <link rel="stylesheet" href="../global_style.css" />
+        <link rel="stylesheet" href="./style.css" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"/>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" ></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
@@ -63,11 +61,9 @@ $count_weight = 0;
     </div>
     <div class="flex-row margin-right">
     <a class="nav-link-style nav-link nav-desktop" href="../home">
-       Home
-</a>
+       Home</a>
 <a class="nav-link-style nav-link nav-desktop" href="../profile">
-       Profile
-</a>
+       Profile</a>
       <div class="dropdown">
         <button class="btn" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false"><img class="menu-img" src="../img/navbar/menu.svg" alt="">
         </button>
@@ -84,15 +80,15 @@ $count_weight = 0;
         </div>
       </div>
     </nav>
-    <div class="col background translate" id="main">
-          <img class="main-image" src="../img/background/background_activity.jpeg" alt="">
+    <div class="col background-photo-activity translate" id="main">
+          <img class="img-activity" src="../img/background/background_activity.jpeg" alt="">
         <div class="text-over">
           <h5 class="title-main">Activity</h5>
         </div>
     </div>
 <div class="flex-row padding-top-content space-around margin-responsive">
           <div class="container-translucent-trends margin-top-bottom translate margin-responsive">
-              <div class="center margin-heading-container">
+              <div class="center padding-50">
                   <h2 class="title-box pink">Trends</h2>
                   <h4 class="bold-paragraph-box gray margin-paragraph-container">Keep it Going</h4>
               </div>
@@ -183,8 +179,8 @@ $count_weight = 0;
               </div>
               <div class="center height_330">
                   <div id="rings" class="chart"></div>
-                  <span id="current_month" class="headings-box-sm white margin-profile display-none"><?php echo date('F Y'); ?></span>
-                  <h4 id="no_workouts" class="headings-box green margin-paragraph-container display-none no-workouts">No workouts this month</h4>
+                  <span id="current_month" class="headings-box-sm white margin-profile hidden"><?php echo date('F Y'); ?></span>
+                  <h4 id="no_workouts" class="headings-box green margin-paragraph-container hidden no-workouts">No workouts this month</h4>
               </div>
         </div>
 </div>

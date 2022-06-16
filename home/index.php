@@ -103,7 +103,6 @@ $count_user = 0;
                 </div>
             </div>
         </div>
-
     </div>
     <div class="container-translucent-posts center margin-top-bottom translate overflow-y scrollbar margin-responsive">
         <div class="center padding-50">
@@ -142,7 +141,6 @@ $count_user = 0;
                             <div style="margin-left: 10%;margin-right: 10%; display: flex; justify-content: center; align-items: center; padding-bottom: 10px">
                                 <span class="paragraph-box white"><?php echo $m['content'] ?></span>
                             </div>
-
                         </div>
                     <?php }} ?></div>
         </div>
@@ -165,7 +163,6 @@ $count_user = 0;
                                 <?php
                                 $userFriend = $row['id'];
                                 $isFollowed = isFollowedBy($id, $userFriend, $friends_follow);
-
                                 if ($isFollowed) {
                                     echo "<input style='display: none' type='text' name='user_to_unfollow' value='$userFriend' />
                                      <button type='submit' name='unfollow' class='button-pink bold-paragraph-box-button'>Unfollow</button>";
@@ -177,7 +174,6 @@ $count_user = 0;
                             </div>
                         </div>
                     </form>
-
                 <?php }
             } ?>
         </div>
