@@ -67,12 +67,15 @@ body {
   line-height: 20px !important;
 }
 
-.column-center{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+/* Profile Photo */
+.profile-img {
+  border-top-left-radius:30px ;
+  border-top-right-radius: 30px;
+  width: 100%;
+  max-height: 50%;
 }
 
+/* Display Content */
 .add-workout-form{
   display: flex;
   justify-items: center;
@@ -81,30 +84,6 @@ body {
   width: 100%;
   height: 100%;
   margin-top: 30px;
-}
-
-.justify-end{
-  display: flex;
-  justify-content: end;
-}
-
-.wrap-570{
-  flex-wrap: wrap;
-  height: 570px;
-}
-.row{
-  display: flex;
-  flex-direction: row;
-}
-.row-space-between{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-.row-space-around{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
 }
 .row-space-around-100{
   display: flex;
@@ -120,93 +99,22 @@ body {
   width: 70%;
 }
 
-/* Container Design */
-.profile-img {
-  border-top-left-radius:30px ;
-  border-top-right-radius: 30px;
-  width: 100%;
-  max-height: 50%;
-}
-
-/* Margins & Paddings */
-.ex-margins {
-  padding: 10px;
-}
-.ex-txt-padding {
-  padding-top: 10px;
-}
-
-.padding-list-icon{
-  margin-left: 8px;
-}
-
-@media screen and (min-width: 1920px) {
-  .container-translucent-health {
-    width: 700px;
-    height: 400px;
-  }
-}
-@media screen and (max-width: 1919px) {
-  .container-translucent-health {
-    width: 600px;
-    height: 360px;
-  }
-}
-@media screen and (max-width: 1300px) {
-  .container-translucent-each-activity {
-    width: 320px;
-  }
-}
 @media screen and (max-width: 1024px) {
   .container-translucent-health {
-    width: 400px;
+    width: 420px;
     height: 400px;
   }
 }
 @media screen and (max-width: 990px) {
   .container-translucent-health {
     width: 400px;
-    height: 350px;
+    height: 360px;
   }
-  .container-translucent-profile {
-    width: 400px;
-    height: 750px;
-  }
-  .container-translucent-workouts {
-    width: 600px;
-  }
-  .container-translucent-form {
-    width: 600px;
-  }
-  .container-translucent-activity {
-    width: 600px;
-  }
-  .container-translucent-each-activity {
-    width: 550px;
-  }
-
 }
 @media screen and (max-width: 640px) {
   .container-translucent-health {
-    width: 300px;
-    height: 350px;
-  }
-  .container-translucent-profile {
-    height: 670px;
-  }
-  .icon-size-md-form {
-    height: 50px;
-    width: 50px;
-    transition-duration: 0.5s;
-  }
-  .icon-size-md-form:hover{
-    height: 55px;
-    width: 55px;
-    transition-duration: 0.5s;
-  }
-  .container-translucent-workouts {
-    height: 550px;
-    min-width: 320px;
+    width: 350px;
+    height: 360px;
   }
   .row-space-around-100{
      width: 300px;
@@ -214,22 +122,13 @@ body {
   .container-translucent-each-activity {
     max-width: 320px;
   }
-  .row-space-between{
-    flex-wrap: wrap;
-    justify-content: space-around;
-    padding-top: 12px;
-  }
 }
 @media screen and (max-width: 400px) {
   .container-translucent-health {
-    width: 250px;
-    height: 350px;
-  }
-  .container-translucent-profile {
-    height: 670px;
+    width: 280px;
+    height: 360px;
   }
   .container-translucent-workouts {
-    height: 550px;
     min-width: 320px;
   }
   .row-space-around-100{
@@ -238,34 +137,22 @@ body {
   .container-translucent-each-activity {
     max-width: 270px;
   }
-  .row-space-between{
-    flex-wrap: wrap;
-    justify-content: space-around;
-    padding-top: 12px;
-  }
 }
 @media screen and (max-width: 300px) {
   .container-translucent-health {
-    width: 250px;
-    height: 350px;
+    width: 230px;
+    height: 400px;
   }
   .container-translucent-profile {
-    height: 550px;
+    height: 600px;
   }
   .container-translucent-workouts {
-    min-width: 250px;
-    height: 500px;
-
+    min-width: 230px;
   }
   .row-space-around-100{
     width: 210px;
   }
   .container-translucent-each-activity {
     max-width: 200px;
-  }
-  .row-space-between{
-    flex-wrap: wrap;
-    justify-content: space-around;
-    padding-top: 12px;
   }
 }
