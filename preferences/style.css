@@ -12,7 +12,8 @@ body {
     background-color: #f3f3f2 !important;
 }
 
-.container-translucent-health {
+/* Container Design */
+.container-translucent-preferences {
     border-radius: 30px;
     box-shadow: 0 7px 10px 0 rgba(0, 0, 0, 0.5);
     width: 400px;
@@ -20,4 +21,58 @@ body {
     background-color: rgba(19, 19, 19, 0.5);
     backdrop-filter: blur(6px) brightness(70%);
     -webkit-backdrop-filter: blur(6px) brightness(70%);
+}
+
+/* Inputs */
+::placeholder {
+    color: #f3f3f2;
+    opacity: 1;
+}
+::-ms-input-placeholder {
+    color: #f3f3f2;
+}
+.input-field {
+    font-size: 16px !important;
+    line-height: 35px !important;
+    color: #f3f3f2;
+}
+.input-field:focus {
+    color: #f3f3f2;
+}
+
+/* Paddings */
+.padding-bottom{
+    margin-bottom: 10px;
+}
+
+/* Width */
+.width-center{
+    width: 100%;
+    margin-left: 50%
+}
+
+/* Media Queries */
+@media screen and (max-width: 500px) {
+    .container-translucent-preferences {
+        width: 350px;
+    }
+    .width-center{
+        margin-left: 40%
+    }
+}
+@media screen and (max-width: 400px) {
+    .container-translucent-preferences {
+        width: 300px;
+    }
+    .width-center{
+        margin-left: 30%
+    }
+}
+@media screen and (max-width: 300px) {
+    .container-translucent-preferences {
+        width: 250px;
+    }
+    .width-center{
+        margin-left: 20%
+    }
 }

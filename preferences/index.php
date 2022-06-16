@@ -63,24 +63,22 @@ if ($data['user_type'] == 'admin') {
         </div>
     </nav>
     <div class="flex-row space-around">
-        <div class="container-translucent-health margin-top-bottom translate">
+        <div class="container-translucent-preferences margin-top-bottom translate margin-responsive">
             <div>
-                <h2 class="center title-box blue margin-top-bottom margin-heading-container">Profile Photo</h2>
+                <h2 class="center title-box green margin-top-bottom margin-heading-container">Profile Photo</h2>
             </div>
-            <div class=" margin-profile padding-50">
-                <form method="post" enctype="multipart/form-data">
-                    <input type="file" name="upload" accept=".png,.gif,.jpg,.webp" required>
-                    <input class="uploadfield" type="submit" name="submit" value="Upload Image">
+            <div class="margin-profile padding-50">
+                <form class="center white" method="post" enctype="multipart/form-data">
+                    <input class="padding-bottom width-center" type="file" name="upload" accept=".png,.gif,.jpg,.webp" required>
+                    <input class="button-blue bold-paragraph-box margin-top-bottom" type="submit" name="submit" value="Upload">
                 </form>
             </div>
         </div>
-        <div class="container-translucent-health margin-top-bottom translate">
+        <div class="container-translucent-preferences margin-top-bottom translate margin-responsive">
             <div>
                 <h2 class="center title-box green margin-top-bottom margin-heading-container">Weight Update</h2>
             </div>
             <form class="center padding-50" method="POST">
-                <div class="form-group margin-top-sm">
-                    <div class="form-group">
                         <input
                                 type="number"
                                 class="input-field"
@@ -90,17 +88,13 @@ if ($data['user_type'] == 'admin') {
                                 max="999"
                                 required
                         />
-                    </div>
-                </div>
-                <div class="justify-right">
                     <button
                             type="submit"
                             value="submit"
-                            class="button-green bold-paragraph-box margin-left"
+                            class="button-blue bold-paragraph-box margin-top-bottom"
                     >
                         Update
                     </button>
-                </div>
             </form>
         </div>
     </div>

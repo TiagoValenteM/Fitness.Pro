@@ -137,7 +137,7 @@ $counter = 0;
                     <div class="margin-profile justify-end column-form" id="actual_exercise">
                         <input type="text" name="exercise_type" class="input-field margin-profile" placeholder="Exercise Type" required>
                         <input type="text" name="kcal_hour" class="input-field margin-profile" placeholder="Kcal per Hour" required>
-                        <input type="file" name="img_data" id="img_data" class="margin-profile" accept=".png,.gif,.jpg,.webp" required>
+                        <input type="file" name="img_data" id="img_data" class="margin-profile white" accept=".png,.gif,.jpg,.webp" required>
                         <div class="flex-row justify-end">
                             <button
                                     type="button"
@@ -177,7 +177,7 @@ $counter = 0;
                     <div class="margin-profile justify-end column-form" id="actual_exercise">
                         <input type="text" name="exercise_type" class="input-field margin-profile" placeholder="Exercise Type" required>
                         <input type="text" name="kcal_hour" class="input-field margin-profile" placeholder="kcal per Hour" required>
-                        <input type="file" name="img_data" class="margin-profile" accept=".png,.gif,.jpg,.webp" required>
+                        <input type="file" name="img_data" class="margin-profile white" accept=".png,.gif,.jpg,.webp" required>
                         <div class="flex-row justify-end">
                             <input type="submit" name="new_workout" class="button-blue bold-paragraph-box" value="New Workout">
                         </div>
