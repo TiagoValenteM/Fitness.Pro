@@ -1,5 +1,4 @@
-/* Background */
-
+/* Body & Background Default */
 html,
 body {
   width: 100%;
@@ -141,10 +140,7 @@ button:focus {
   background-color: #99fb0b !important;
   border-radius: 11px !important;
   color: #131313;
-  padding-right: 20px;
-  padding-left: 20px;
-  padding-top: 5px;
-  padding-bottom: 5px;
+  padding: 5px 20px;
 }
 
 /* Font Style */
@@ -235,7 +231,7 @@ button:focus {
 /* Input & Form Design */
 
 .input-field {
-  border-radius: 0%;
+  border-radius: 0;
   border: 0;
   padding: 0;
   background-color: transparent;
@@ -282,11 +278,9 @@ button:focus {
 
 .container-look {
   border-radius: 30px;
-  box-shadow: 0px 7px 10px 0px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 7px 10px 0 rgba(0, 0, 0, 0.5);
   min-width: 350px;
-  max-width: auto;
   min-height: 600px;
-  max-height: auto;
 }
 .container-fluid {
   height: 100% !important;
@@ -345,9 +339,7 @@ button:focus {
 @media screen and (min-width: 1920px) {
   .container-look {
     min-width: 500px;
-    max-width: auto;
     min-height: 700px;
-    max-height: auto;
   }
   .width {
     min-width: 20vh;
@@ -356,9 +348,7 @@ button:focus {
 @media screen and (max-width: 1919px) {
   .container-look {
     min-width: 400px;
-    max-width: auto;
     min-height: 650px;
-    max-height: auto;
   }
   .width {
     min-width: 26vh;
@@ -378,17 +368,13 @@ button:focus {
   }
   .container-look {
     min-width: 400px;
-    max-width: auto;
     min-height: 600px;
-    max-height: auto;
   }
 }
 @media screen and (max-width: 640px) {
   .container-look {
     min-width: 320px;
-    max-width: auto;
     min-height: 550px;
-    max-height: auto;
   }
   .width {
     min-width: 24vh;
@@ -402,7 +388,7 @@ button:focus {
 
 /* iPhone X & newer (Safe Area) */
 
-@supports (padding: max(0px)) {
+@supports (padding: 0) {
   .post {
     padding-left: max(12px, env(safe-area-inset-left));
     padding-right: max(12px, env(safe-area-inset-right));

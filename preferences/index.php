@@ -62,36 +62,54 @@ if ($data['user_type'] == 'admin') {
             </div>
         </div>
     </nav>
-        <form method="post" enctype="multipart/form-data">
-            <input type="file" name="upload" accept=".png,.gif,.jpg,.webp" required>
-            <input class="uploadfield" type="submit" name="submit" value="Upload Image">
-        </form>
-
-    <div style="display: flex; flex-direction: column; padding-top: 20px">
-        <form action="" method="POST">
-            <div class="form-group margin-top-sm">
-                <div class="form-group">
-                    <label for="exampleInputWeight1">Weight</label>
-                    <input
-                            type="number"
-                            class="input-field"
-                            id="exampleInputweight1"
-                            name="weight"
-                            placeholder="e.g. 75"
-                            max="999"
-                            required
-                    />
+    <div class="flex-row space-around">
+        <div class="container-translucent-health margin-top-bottom translate">
+            <div>
+                <h2 class="center title-box blue margin-top-bottom margin-heading-container">Profile Photo</h2>
+            </div>
+            <div class=" margin-profile padding-50">
+                <form method="post" enctype="multipart/form-data">
+                    <input type="file" name="upload" accept=".png,.gif,.jpg,.webp" required>
+                    <input class="uploadfield" type="submit" name="submit" value="Upload Image">
+                </form>
+            </div>
+        </div>
+        <div class="container-translucent-health margin-top-bottom translate">
+            <div>
+                <h2 class="center title-box green margin-top-bottom margin-heading-container">Weight Update</h2>
+            </div>
+            <form class="center padding-50" method="POST">
+                <div class="form-group margin-top-sm">
+                    <div class="form-group">
+                        <input
+                                type="number"
+                                class="input-field"
+                                id="exampleInputweight1"
+                                name="weight"
+                                placeholder="e.g. 75"
+                                max="999"
+                                required
+                        />
+                    </div>
                 </div>
-            </div>
-            <div class="justify-right">
-                <button
-                        type="submit"
-                        value="submit"
-                        class="button-green button-text margin-top-sm"
-                >
-                    submit
-                </button>
-            </div>
-        </form>
+                <div class="justify-right">
+                    <button
+                            type="submit"
+                            value="submit"
+                            class="button-green bold-paragraph-box margin-left"
+                    >
+                        Update
+                    </button>
+                </div>
+            </form>
+        </div>
     </div>
+    <footer class="padding-footer">
+        <hr class="borderline">
+        <div class="flex-row justify-around">
+            <h5 class="footer-text ">Copyright © 2022    Fitness.Pro.    All rights reserved.</h5>
+            <h5 class="footer-text">Portugal</h5>
+        </div>
+    </footer>
     </body>
+</html>
