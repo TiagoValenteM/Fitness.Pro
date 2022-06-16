@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Jun 15, 2022 at 06:44 PM
+-- Generation Time: Jun 16, 2022 at 11:13 PM
 -- Server version: 10.4.21-MariaDB
 -- PHP Version: 8.1.4
 
@@ -140,9 +140,9 @@ CREATE TABLE `friends_follow` (
 INSERT INTO `friends_follow` (`follow_id`, `follower_id`, `followed_user_id`) VALUES
 (1, 1, 3),
 (2, 1, 7),
-(3, 3, 1),
+(3, 3, 2),
 (35, 1, 15),
-(43, 31, 1),
+(43, 31, 2),
 (44, 31, 3),
 (45, 31, 7),
 (46, 31, 8),
@@ -151,19 +151,21 @@ INSERT INTO `friends_follow` (`follow_id`, `follower_id`, `followed_user_id`) VA
 (49, 31, 26),
 (50, 3, 25),
 (52, 3, 7),
-(53, 7, 1),
+(53, 7, 2),
 (54, 7, 25),
-(56, 32, 1),
+(56, 32, 2),
 (57, 32, 7),
 (58, 1, 32),
-(59, 8, 1),
+(59, 8, 2),
 (60, 8, 3),
 (61, 8, 7),
 (62, 8, 15),
 (63, 8, 25),
 (64, 8, 26),
 (65, 8, 31),
-(66, 31, 2);
+(66, 31, 2),
+(67, 2, 3),
+(68, 2, 7);
 
 -- --------------------------------------------------------
 
@@ -190,18 +192,17 @@ INSERT INTO `friends_post` (`post_id`, `user_id`, `content`, `created`, `created
 (5, 3, 'És grande irmão.', '2022-05-31 00:28:07', 2, 1),
 (10, 7, 'Sua preguiçosa!\r\n', '2022-05-31 11:07:19', 2, 7),
 (11, 15, 'Grande Bruno! Já fizeste Cycling hoje?', '2022-06-01 12:29:45', 2, 0),
-(12, 3, 'nao es grande es big', '2022-06-01 15:10:07', 2, 1),
 (13, 25, 'Oi Núria! Tas boa?\r\n', '2022-06-01 16:11:01', 3, 0),
 (15, 26, 'Hey! Soube que partiste uma perna, estás bem?', '2022-06-03 21:16:03', 2, 2),
-(16, 2, 'Oioi tas bom?', '2022-06-03 23:50:23', 31, 5),
 (17, 8, 'Como estás Filipinha? Não te vejo há anos...', '2022-06-04 10:47:37', 31, 10),
-(21, 7, 'Oioi Osmainy, faz tempo que não te vejo lá na quinta! Beijocas ;D', '2022-06-04 15:36:52', 31, 2),
+(21, 7, 'Oioi Osmainy, faz tempo que não te vejo lá na quinta! Beijocas ;D', '2022-06-04 15:36:52', 31, 3),
 (23, 25, 'Olá!! Como vai isso?', '2022-06-04 16:34:38', 7, 0),
 (24, 7, 'Salut Paulito :D Tenho estado na Alemanha a trabalhar!', '2022-06-04 16:35:54', 7, 3),
 (26, 25, 'Núria... Odeio-te tanto mas tanto! :*', '2022-06-04 18:49:01', 2, 3),
 (27, 2, 'Filho, vais às compras por mim?', '2022-06-08 23:02:13', 32, 2),
-(28, 2, 'Hallo, vou sim!!', '2022-06-08 23:03:07', 2, 1),
-(30, 32, 'Olá Sandra, que tal???', '2022-06-13 12:08:44', 8, 1);
+(28, 2, 'Hallo, vou sim!!', '2022-06-08 23:03:07', 2, 23),
+(30, 32, 'Olá Sandra, que tal???', '2022-06-13 12:08:44', 8, 1),
+(31, 7, 'Boa tarde, tudo bem?', '2022-06-16 17:44:01', 2, 1);
 
 -- --------------------------------------------------------
 
@@ -260,12 +261,14 @@ INSERT INTO `users` (`id`, `name`, `email`, `password`, `user`, `gender`, `initi
 (2, 'Tiago Valente', 'tiagomilheiro13@gmail.com', 'e5dc74ac9a1deac059d93981178144c3', 'tiagovalente', 'm', 69, 182, 600, '2022-05-18 11:58:00', 'user'),
 (3, 'Daniel Lopes', 'daniel.ramos.lopes@hotmail.com', 'e5dc74ac9a1deac059d93981178144c3', 'danlopes', 'm', 75, 179, 600, '2022-05-18 11:58:00', 'user'),
 (7, 'Osmainy Raimundo', 'osmainy@gmail.com', 'e5dc74ac9a1deac059d93981178144c3', 'osmainy.raimundo', 'f', 50, 174, 600, '2022-05-18 11:58:00', 'user'),
-(8, 'Filipa Marques', 'ola@ola', '2fe04e524ba40505a82e03a2819429cc', 'ola', 'f', 11, 11, 600, '2022-05-18 11:58:00', 'user'),
+(8, 'Filipa Marques', 'flipinhamarques@hotmail.com', '2fe04e524ba40505a82e03a2819429cc', 'filipamarques', 'f', 11, 11, 600, '2022-05-18 11:58:00', 'user'),
 (15, 'Bruno Nogueira', 'bruno.nogueira@outlook.pt', 'e5dc74ac9a1deac059d93981178144c3', 'brnogu', 'm', 53, 170, 600, '2022-05-18 11:58:00', 'user'),
 (25, 'Núria Fernandes', 'nuria@gmail.com', 'e5dc74ac9a1deac059d93981178144c3', 'nuriafernandes', 'f', 67, 89, 600, '2022-05-18 11:58:00', 'user'),
 (26, 'João Marco', 'joaomarco@gmail.com', 'e5dc74ac9a1deac059d93981178144c3', 'joaomarco', 'm', 56, 125, 600, '2022-05-18 12:06:50', 'user'),
-(31, 'Paulo Antunes', 'oi@oi', 'e5dc74ac9a1deac059d93981178144c3', 'paulito', 'm', 27, 146, 600, '2022-05-24 01:08:46', 'user'),
-(32, 'Sandra Milheiro', 'sandramilheiro@gmail.com', 'e5dc74ac9a1deac059d93981178144c3', 'sandramilheiro', 'f', 94, 173, 600, '2022-06-08 22:59:00', 'user');
+(31, 'Paulo Antunes', 'paulito@gmail.com', 'e5dc74ac9a1deac059d93981178144c3', 'paulito', 'm', 27, 146, 600, '2022-05-24 01:08:46', 'user'),
+(32, 'Sandra Milheiro', 'sandramilheiro@gmail.com', 'e5dc74ac9a1deac059d93981178144c3', 'sandramilheiro', 'f', 94, 173, 600, '2022-06-08 22:59:00', 'user'),
+(106, 'Ana Lourenço', 'ritalourenco@gmail.com', 'e5dc74ac9a1deac059d93981178144c3', 'ritalourencoo', 'f', 57, 164, 600, '2022-06-16 04:00:58', 'user'),
+(107, 'Rafael Lopes', 'rafaellopes@gmail.com', 'e5dc74ac9a1deac059d93981178144c3', 'rafaellopes', 'm', 89, 194, 600, '2022-06-16 04:02:38', 'user');
 
 -- --------------------------------------------------------
 
@@ -372,19 +375,19 @@ ALTER TABLE `exercises_default`
 -- AUTO_INCREMENT for table `friends_follow`
 --
 ALTER TABLE `friends_follow`
-  MODIFY `follow_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=67;
+  MODIFY `follow_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=70;
 
 --
 -- AUTO_INCREMENT for table `friends_post`
 --
 ALTER TABLE `friends_post`
-  MODIFY `post_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
+  MODIFY `post_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=106;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=110;
 
 --
 -- Constraints for dumped tables
