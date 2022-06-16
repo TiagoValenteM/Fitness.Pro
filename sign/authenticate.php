@@ -40,12 +40,12 @@ function failed()
 {
     // set error message in session variable to display on the page
     $_SESSION['errorMessage'] = true;
-    header('location:../index'); // redirect
+    header('location:../sign'); // redirect
 }
 
 function successful()
 {
-    header('location:../index'); // redirect
+    header('location:../home'); // redirect
 }
 
 function admin_dashboard()

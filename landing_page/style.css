@@ -1,0 +1,278 @@
+html { overflow-y: scroll; }
+
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgb(230, 230, 230);
+  }
+header{
+  background-color:rgba(158, 155, 155, 0.799);
+    width: 100%;
+    height: 100%;
+    height: 70px;
+    width: 100%;
+    margin-top: -10px;
+    margin-bottom: 5px;
+    margin-right: 50px;
+    position: top;
+    position: fixed;
+}
+#Logo p{
+
+    margin-left: 3%;
+    color:black;
+    font-size: 24px;
+    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+}
+#sub{width: 100px;
+    height: 35px;
+    background-color: #A6FF00;
+    border: 2px solid black;
+    position: absolute;
+    top: 30%;
+    right: 13%;
+    font-size: 14px;
+    font-weight: bold;
+    color: black;
+    text-align: center;
+    border-radius: 10px 10px 10px 10px;}
+
+#user{width: 30px;
+    height: 28px;
+    position: absolute;
+    top: 36%;
+    right: 9%;}
+#beggin{
+height: 700px;
+width: 900px;
+width: 100%;
+position: absolute;
+margin-top: 4.1%;
+animation: changeBackgroundImage 20s infinite;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+}
+@keyframes changeBackgroundImage {
+    00%, 24.9% {
+        background-image:  url("https://www.apple.com/v/apple-fitness-plus/p/images/overview/hero/hero_04__c1ed9ztdzeoi_large_2x.jpg");
+    }
+    25%, 49.9% {
+      background-image:  url("P2.png");
+    }
+    50%, 74.9% {
+      background-image:  url('P3.png');
+    }
+    75%,99% {
+      background-image:  url('P4.png');
+    }
+    100% {
+      background-image: url("https://www.apple.com/v/apple-fitness-plus/p/images/overview/hero/hero_04__c1ed9ztdzeoi_large_2x.jpg");
+    }
+  }
+
+
+
+#beggin h1{font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+font-weight: bold;
+font-size: 70px;
+margin-top: 0%;
+background-color: rgba(0,0,0,0.5);
+}
+#beggin h2{font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 25px;
+  background-color: rgba(0,0,0,0.5);}
+.text {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+  }
+#middle {
+    height: 1700px;
+    width: 900px;;
+    width: 100%;
+    position: absolute;
+    margin-top: 1700px;
+    overflow: hidden;
+}
+#middle h1{
+  color: black;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+font-weight: bold;
+font-size: 60px;
+margin-left: 6%;
+}
+
+#middle h2{color: black;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+font-weight: bold;
+font-size: 20px;
+text-align: center;
+background-color: rgb(75, 256, 206);
+position: absolute;
+left: 30%;
+border-radius: 10px 10px 10px 10px;
+width: 600px;
+}
+
+.carrossel img{
+width: 400px;
+height: 500px;
+outline: 8px solid rgb(230, 230, 230);
+border-radius: 10px 10px 10px 10px;
+}
+.carrossel{
+  width: 400px;
+  height: 250px;
+  position: relative;
+  margin-top: 10%;
+}
+
+.carrossel ul{
+  display: flex;
+  list-style: none;
+  width: 4000px;
+  height: 500px;
+}
+
+.carrossel li{
+  position: relative;
+  animation: slide 30s infinite ;
+}
+
+@keyframes slide{
+  00%{left: 0px;}
+  50%{left: -1400px;}
+  99%{left: -2600px;}
+  100%{left: 0px;}
+}
+
+.crr img{
+  width: 400px;
+  height: 500px;
+  outline: 8px solid rgb(230, 230, 230);
+  border-radius: 10px 10px 10px 10px;
+  }
+
+.crr{
+  width: 400px;
+  height: 250px;
+  position: relative;
+  margin-top: 20%;
+}
+
+.crr ul{
+  display: flex;
+  list-style: none;
+  width: 4000px;
+  height: 500px;
+}
+
+.crr li{
+  position: relative;
+  animation: slide 30s infinite ;
+}
+
+#description{  height: 1000px;
+  width: 900px;
+  width: 100%;
+  position: absolute;
+  margin-top: 790px;
+  overflow: hidden;
+ }
+
+#description h1{color: black;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+font-weight: bold;
+font-size: 60px;
+margin-left: 6%;
+margin-top: 5%;
+}
+
+#tt{float: right;
+height: 350px;
+width: 500px;
+background-color: rgb(233,68,118);
+border-radius: 10px 10px 10px 10px;
+position: relative;
+margin-top: 2%;
+margin-right: 5%;
+}
+#tt h1{color: white;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+font-weight: bold;
+font-size: 40px;
+}
+#tt h2{color: rgba(255, 255, 255, 0.577);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+font-weight: bold;
+font-size: 20px;
+text-align: center;
+max-width: 470px;
+margin-left: 2%;}
+
+#images{height: 255px;
+  width: 900px;
+  width: 100%;
+  position: relative;
+  margin-top: 34%;
+}
+
+#images img:nth-child(1) {
+  border-radius: 10px 10px 10px 10px;
+  position: relative;
+  margin-left: 8%;
+}
+#images img:nth-child(2){ 
+  border-radius: 10px 10px 10px 10px;
+  position: relative;
+  margin-left: 5%;
+}
+#images img:nth-child(3){ 
+  border-radius: 10px 10px 10px 10px;
+  position: relative;
+  margin-left: 5%;
+}
+
+
+#image1{position: relative;
+margin-left: 10%;
+margin-top: 30%;}
+
+#image2 {position: absolute;
+  margin-left: 50%;
+  margin-top: 30%;
+
+  border-radius: 10px 10px 10px 10px;}
+
+
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+#ll video{
+  position: absolute;
+
+  margin-left: -1%;
+  border-radius: 10px 10px 10px 10px;
+
+}
+
+#community{
+  height: 800px;
+  width: 1600px;
+  position: absolute;
+  margin-top: 1550px;
+  overflow: hidden;
+  background-image: url("pessoasfit3.webp");
+  border: 15px solid rgb(192, 228, 255);
+}

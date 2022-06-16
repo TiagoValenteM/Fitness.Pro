@@ -14,8 +14,8 @@ if (isset($_SESSION['user'])) {
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="viewport-fit=cover, initial-scale=1.0" />
-    <link rel="stylesheet" href="sign/style.css" />
-    <link rel="icon" type="imagem/png" href="sign/favicon.ico" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="imagem/png" href="favicon.ico" />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
@@ -34,7 +34,7 @@ if (isset($_SESSION['user'])) {
       <div class="row center"> 
         <div class="col translate" id="welcome">
           <div class="side-padding vertical-align margin-right-left">
-            <img class="logo-size flex rotate" src="sign/img/logo.png" />
+            <img class="logo-size flex rotate" src="img/logo.png" />
             <h1 class="title-phrase flex top-padding bottom-padding">
               Walk. Run. <br />
               Be inspired.
@@ -58,7 +58,7 @@ if (isset($_SESSION['user'])) {
                 <button class="link-pink" id="new-user">Create an account</button>
               </div>
               <div>
-              <form action="sign/authenticate.php" method="POST" class="width">
+              <form action="authenticate.php" method="POST" class="width">
                 <div class="form-group margin-top">
                   <label for="exampleInputUser1">Username</label>
                   <input
@@ -109,7 +109,7 @@ if (isset($_SESSION['user'])) {
                   <h3 class="heading-2 padding-right">Already a member?</h3>
                   <button class="link-pink" id="old-user">Sign In</button>
                 </div>
-                <form action="sign/register.php" method="POST">
+                <form action="register.php" method="POST">
                   <div class="form-group margin-top-sm">
                       <label for="exampleInputName1">Name</label>
                       <input
@@ -225,5 +225,5 @@ if (isset($_SESSION['user'])) {
       </div>
     </div>
   </body>
-  <script src="sign/js/script.js"></script>
+  <script src="js/script.js"></script>
 </html>

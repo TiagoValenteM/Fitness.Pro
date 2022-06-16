@@ -68,6 +68,8 @@ body {
   height: 60px;
   background-color: rgba(19, 19, 19, 0.5);
 }
+.container-translucent-each-activity:hover .icon-size-md-form{width: 70px;height: 70px}.container-translucent-each-activity:hover{background-color: rgba(19, 19, 19, 0.7);} {
+}
 
 /* Chart Design */
 g g path {
