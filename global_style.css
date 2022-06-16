@@ -245,7 +245,7 @@ input:focus{
     display: none;
 }
 
-/* Height */
+/* Height & Width */
 .height_full{
     height: 100%;
 }
@@ -254,6 +254,12 @@ input:focus{
 }
 .height_330{
     height: 330px;
+}
+.width-200{
+    width: 250px;
+}
+.width-350{
+    width: 350px
 }
 
 /* Icon Size */

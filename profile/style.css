@@ -1,17 +1,7 @@
 /* Body & Background Default */
 html,
 body {
-  width: 100%;
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  overflow-y: auto;
-  overflow-x: hidden;
-  background-color: #e6e6e6;
-  font-family: SF Pro Display, SF Pro Icons, Helvetica Neue, Helvetica, Arial,
-  sans-serif;
-}
-.background {
+  background-color: #e6e6e6 !important;
   background: url(../img/background/background_profile.jpeg)
   no-repeat center center fixed;
   background-size: contain;
@@ -71,66 +61,6 @@ body {
   background-color: rgba(19, 19, 19, 0.5);
 }
 .container-translucent-each-activity:hover .icon-size-md-form{width: 70px;height: 70px}.container-translucent-each-activity:hover{background-color: rgba(19, 19, 19, 0.7);} {
-}
-
-/* Font style */
-.title-box {
-  font-size: 30px;
-  line-height: 1.05;
-  font-weight: 600;
-  letter-spacing: -0.015em;
-  font-family: SF Pro Display, SF Pro Icons, Helvetica Neue, Helvetica, Arial,
-  sans-serif;
-}
-.headings-box {
-  font-size: 22px;
-  line-height: 1.05;
-  font-weight: 600;
-  letter-spacing: -0.015em;
-  font-family: SF Pro Display, SF Pro Icons, Helvetica Neue, Helvetica, Arial,
-  sans-serif;
-}
-.headings-box-sm {
-  font-size: 19px;
-  line-height: 1.05;
-  font-weight: 600;
-  letter-spacing: -0.015em;
-  font-family: SF Pro Display, SF Pro Icons, Helvetica Neue, Helvetica, Arial,
-  sans-serif;
-}
-.paragraph-box {
-  font-size: 16px;
-  line-height: 1.4705882353;
-  font-weight: 400;
-  letter-spacing: -0.022em;
-  font-family: SF Pro Display, SF Pro Icons, Helvetica Neue, Helvetica, Arial,
-  sans-serif;
-  text-align: justify;
-}
-.paragraph-box-xl {
-  font-size: 16px;
-  line-height: 1.4705882353;
-  font-weight: 550;
-  letter-spacing: -0.022em;
-  font-family: SF Pro Display, SF Pro Icons, Helvetica Neue, Helvetica, Arial,
-  sans-serif;
-}
-
-/* Colors */
-.pink {
-  color: #f71f6a;
-}
-.blue {
-  color: #04f1d6;
-}
-.green {
-  color: #99fb0b;
-}
-.gray{
-  color: #383938;
-}
-.white {
-  color: #f3f3f3;
 }
 
 /* NavBar Design */
@@ -440,78 +370,6 @@ input:focus{
   max-height: 50%;
 }
 
-.icon-size-xl {
-  height: 90px;
-  width: 90px;
-  transition-duration: 0.5s;
-}
-.icon-size-xl:hover{
-  height: 110px;
-  width: 110px;
-  transition-duration: 0.5s;
-}
-
-.icon-size-md {
-  height: 70px;
-  width: 70px;
-  transition-duration: 0.5s;
-}
-.icon-size-md:hover{
-  height: 110px;
-  width: 110px;
-  transition-duration: 0.5s;
-}
-.icon-size-sm {
-  height: 50px;
-  width: 50px;
-  transition-duration: 0.5s;
-}
-.icon-size-sm:hover{
-  height: 110px;
-  width: 110px;
-  transition-duration: 0.5s;
-}
-.icon-size-xs {
-  height: 20px;
-  width: 20px;
-}
-
-.icon-size-md-form {
-  height: 60px;
-  width: 60px;
-  transition-duration: 0.5s;
-}
-.icon-size-md-form:hover{
-  height: 70px;
-  width: 70px;
-  transition-duration: 0.5s;
-}
-
-.icon-size-md-activity {
-  height: 70px;
-  width: 70px;
-}
-/* Display */
-.height_full{
-  height: 100%;
-}
-.height_90{
-  height: 90%;
-}
-.width-350{
-  width: 350px
-}
-.width-200{
-  width: 250px;
-}
-
-.hidden{
-  display: none;
-}
-.overflow-y{
-  overflow-y: auto;
-  overflow-x: hidden;
-}
 /* Margins & Paddings */
 .ex-margins {
   padding: 10px;
@@ -538,38 +396,6 @@ input:focus{
   font-family: SF Pro Display, SF Pro Icons, Helvetica Neue, Helvetica, Arial,
   sans-serif;
   color: #383938;
-}
-
-.fade-in {
-  animation: fadeIn 0.7s;
-  -webkit-animation: fadeIn 0.7s;
-}
-@keyframes fadeIn {
-  0% {opacity:0;}
-  100% {opacity:1;}
-}
-@-webkit-keyframes fadeIn {
-  0% {opacity:0;}
-  100% {opacity:1;}
-}
-
-.translate {
-  animation: slide;
-  -webkit-animation: slide;
-  animation-duration: 0.7s;
-}
-@keyframes slide {
-  from {
-    opacity: 0;
-    transform: translateY(100px);
-    webkit-transform: translateY(100px);
-  }
-  to {
-    opacity: 1;
-    backdrop-filter: blur(6px) brightness(70%);
-    -webkit-backdrop-filter: blur(6px) brightness(70%);
-    transform: translateY(0px);
-  }
 }
 
 .scrollbar {
@@ -675,41 +501,6 @@ input:focus{
     height: 550px;
     min-width: 320px;
   }
-  .icon-size-xl {
-    height: 60px;
-    width: 60px;
-    transition-duration: 0.5s;
-  }
-  .icon-size-xl:hover{
-    height: 70px;
-    width: 70px;
-    transition-duration: 0.5s;
-  }
-
-  .icon-size-md {
-    height: 50px;
-    width: 50px;
-    transition-duration: 0.5s;
-  }
-  .icon-size-md:hover{
-    height: 70px;
-    width: 70px;
-    transition-duration: 0.5s;
-  }
-  .icon-size-sm {
-    height: 40px;
-    width: 40px;
-    transition-duration: 0.5s;
-  }
-  .icon-size-sm:hover{
-    height: 70px;
-    width: 70px;
-    transition-duration: 0.5s;
-  }
-  .icon-size-xs {
-    height: 25px;
-    width: 25px;
-  }
   .row-space-around-100{
      width: 300px;
    }
@@ -740,41 +531,6 @@ input:focus{
     height: 550px;
     min-width: 320px;
   }
-  .icon-size-xl {
-    height: 60px;
-    width: 60px;
-    transition-duration: 0.5s;
-  }
-  .icon-size-xl:hover{
-    height: 70px;
-    width: 70px;
-    transition-duration: 0.5s;
-  }
-
-  .icon-size-md {
-    height: 50px;
-    width: 50px;
-    transition-duration: 0.5s;
-  }
-  .icon-size-md:hover{
-    height: 70px;
-    width: 70px;
-    transition-duration: 0.5s;
-  }
-  .icon-size-sm {
-    height: 40px;
-    width: 40px;
-    transition-duration: 0.5s;
-  }
-  .icon-size-sm:hover{
-    height: 70px;
-    width: 70px;
-    transition-duration: 0.5s;
-  }
-  .icon-size-xs {
-    height: 25px;
-    width: 25px;
-  }
   .row-space-around-100{
     width: 240px;
   }
@@ -792,9 +548,6 @@ input:focus{
     width: 250px;
     height: 350px;
   }
-  .sm-footer{
-    display: none;
-  }
   .flex-row{
     flex-wrap: wrap;
   }
@@ -808,41 +561,6 @@ input:focus{
     min-width: 250px;
     height: 500px;
 
-  }
-  .icon-size-xl {
-    height: 40px;
-    width: 40px;
-    transition-duration: 0.5s;
-  }
-  .icon-size-xl:hover{
-    height: 50px;
-    width: 50px;
-    transition-duration: 0.5s;
-  }
-
-  .icon-size-md {
-    height: 40px;
-    width: 40px;
-    transition-duration: 0.5s;
-  }
-  .icon-size-md:hover{
-    height: 50px;
-    width: 50px;
-    transition-duration: 0.5s;
-  }
-  .icon-size-sm {
-    height: 30px;
-    width: 30px;
-    transition-duration: 0.5s;
-  }
-  .icon-size-sm:hover{
-    height: 50px;
-    width: 50px;
-    transition-duration: 0.5s;
-  }
-  .icon-size-xs {
-    height: 20px;
-    width: 20px;
   }
   .row-space-around-100{
     width: 210px;
