@@ -64,6 +64,15 @@ body {
     sans-serif;
     font-color: #383938;
 }
+.bold-paragraph-box-button {
+    font-size: 14px;
+    line-height: 1.05;
+    font-weight: 550;
+    letter-spacing: -0.015em;
+    font-family: SF Pro Display, SF Pro Icons, Helvetica Neue, Helvetica, Arial,
+    sans-serif;
+    color: #f3f3f3 !important;
+}
 .title-main {
     font-size: 150px;
     line-height: 1.05;
@@ -226,6 +235,36 @@ input:focus{
     padding: 5px 10px;
     margin-top: 1vh;
 }
+.button-like {
+    background-image: url(./img/icons/thumbs-up.svg);
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    width: 24px;
+    height: 24px;
+}
+.button-back-to-me {
+    background-image: url(./img/icons/user.svg);
+    background-color: #99fb0b;
+    border-radius: 50%;
+    padding: 20px;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    width: 24px;
+    height: 24px;
+}
+.name-friend {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    outline: none;
+}
 .input-field {
     border-radius: 0;
     border: 0;
@@ -272,6 +311,9 @@ input[type="time"]::-webkit-calendar-picker-indicator {
 /* Height & Width */
 .height_full{
     height: 100%;
+}
+.height_80{
+    height: 80%;
 }
 .height_90{
     height: 90%;
@@ -379,6 +421,13 @@ input[type="time"]::-webkit-calendar-picker-indicator {
 }
 
 /* Paddings */
+.padding-sides{
+    padding-right: 45px;
+    padding-left: 45px;
+}
+.padding-sides-sm{
+    padding: 15px;
+}
 .padding-top-content {
     padding-top: 5%;
 }
@@ -468,6 +517,13 @@ input[type="time"]::-webkit-calendar-picker-indicator {
 }
 .relative{
     position: relative;
+}
+.wrap-friends{
+    display: flex;
+    flex-wrap: wrap;
+    height: 570px;
+    justify-content: center;
+    padding-top: 30px;
 }
 .wrap-570{
     flex-wrap: wrap;

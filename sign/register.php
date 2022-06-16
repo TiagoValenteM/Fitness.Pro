@@ -52,13 +52,13 @@ function failed($text)
 {
     // set error message in session variable to display on the page
     $_SESSION['registerError'] = $text;
-    header('location:../index'); // redirect
+    header('location:./index'); // redirect
 }
 
 function sucessful($text)
 {
     $_SESSION['successMessage'] = $text;
-    header('location:../index'); // redirect
+    header('location:./index'); // redirect
 }
 
 // this function performs the necessary validations for all inputs
