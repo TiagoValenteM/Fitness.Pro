@@ -10,7 +10,6 @@ $(document).ready(function () {
             });
         }
     });
-
     $("#return_icon").click(function () {
         $("#close_box").hide();
         $("#open_box").show();

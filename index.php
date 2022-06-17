@@ -15,11 +15,8 @@ if (isset($_SESSION['user'])) {
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="viewport-fit=cover, initial-scale=1.0" />
     <link rel="stylesheet" href="sign/style.css" />
-    <link rel="icon" type="imagem/png" href="sign/favicon.ico" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
-    />
+    <link rel="icon" type="imagem/png" href="img/favicon.ico" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"/>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <title>Sign In - Fitness.Pro</title>

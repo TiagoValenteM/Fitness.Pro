@@ -7,25 +7,25 @@ include("../config.php");
 $data = getLoggedUserData($link);
 $id = $data['id'];
 
-// getting the most recent weight from database
-$select_weight = mysqli_query($link,"SELECT * FROM weight WHERE id='$id' ORDER BY `date` DESC LIMIT 1 ");
-$current_weight = mysqli_fetch_assoc($select_weight);
-// checking if the user has a more recent weight than the initial value
-$value= isset($current_weight['id']);
-
-// formula to calculate BMI
-if ($value != 0) {
-    $mass = $current_weight['weight'];
-} else {
-    $mass = $data["initial_weight"];
+function CurrentWeight($link, $id, $data){
+    $select_weight = mysqli_query($link,"SELECT * FROM weight WHERE id='$id' ORDER BY `date` DESC LIMIT 1 ");
+    $current_weight = mysqli_fetch_assoc($select_weight);
+    $value = isset($current_weight['id']);
+    if ($value != 0) {
+        $mass = $current_weight['weight'];
+    } else {
+        $mass = $data["initial_weight"];
+    }
+    return $mass;
 }
+function BMI($data, $mass){
     $height = $data['height']/100; // <-- divide by 100 because it requires meters
 
     $height2 = ($height * $height);
     $bmi = $mass / $height2;
-    $bmi = round($bmi,2);
-
-// BMI classes
+    return round($bmi,2);
+}
+function BMIClasses($bmi){
     if ($bmi <= 18.5) {
         $output = "Underweight";
 
@@ -44,5 +44,13 @@ if ($value != 0) {
     } else if ($bmi > 45.0) {
         $output = "Super obesity";
     }
+    return $output;
+}
+
+$mass = CurrentWeight($link,$id,$data);
+$bmi = BMI($data, $mass);
+$output = BMIClasses($bmi);
+
+
 
 

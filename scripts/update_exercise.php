@@ -5,10 +5,15 @@ require_once '../session.php';
 // connects to the database 'fitnesspro'
 include("../config.php");
 
+function SelectExercise($link, $exercise_id){
+    $exercise_default = mysqli_query($link,"SELECT * FROM exercises_default WHERE exercise_id='$exercise_id'");
+    $exercise_fetch = mysqli_fetch_assoc($exercise_default);
+    return $exercise_fetch;
+}
+
 // getting the id from each exercise
 $exercise_id = $_REQUEST['exercise_id'];
-$exercise_default = mysqli_query($link,"SELECT * FROM exercises_default WHERE exercise_id='$exercise_id'");
-$exercise_fetch = mysqli_fetch_assoc($exercise_default);
+$exercise_fetch = SelectExercise($link, $exercise_id);
 
 echo "<div>
             <h1 class='headings-box-sm white margin-paragraph-container'>Updating workout?<br /></h1>

@@ -17,26 +17,11 @@ body {
   font-family: SF Pro Display, SF Pro Icons, Helvetica Neue, Helvetica, Arial,
     sans-serif;
 }
-
-input:-webkit-autofill,
-input:-webkit-autofill:hover,
-input:-webkit-autofill:focus,
-textarea:-webkit-autofill,
-textarea:-webkit-autofill:hover,
-textarea:-webkit-autofill:focus,
-select:-webkit-autofill,
-select:-webkit-autofill:hover,
-select:-webkit-autofill:focus {
-  -webkit-box-shadow: transparent;
-  transition: background-color 5000s;
-}
-
 .white {
   background-color: #f3f3f3;
 }
 
 /* Flex & Aligns */
-
 .vertical-align {
   display: flex;
   flex-direction: column;
@@ -86,7 +71,6 @@ select:-webkit-autofill:focus {
 }
 
 /* Margins & Paddings */
-
 .top-padding {
   padding-top: 2vh;
 }
@@ -122,7 +106,6 @@ select:-webkit-autofill:focus {
 }
 
 /* Button Design */
-
 .button-text {
   font-size: 14px;
   line-height: 1.05;
@@ -144,7 +127,6 @@ button:focus {
 }
 
 /* Font Style */
-
 .title-phrase {
   font-size: 80px;
   line-height: 1.05;
@@ -229,7 +211,6 @@ button:focus {
 }
 
 /* Input & Form Design */
-
 .input-field {
   border-radius: 0;
   border: 0;
@@ -273,9 +254,20 @@ button:focus {
 .width {
   min-width: 23vh;
 }
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  -webkit-box-shadow: transparent;
+  transition: background-color 5000s;
+}
 
 /* Container Design */
-
 .container-look {
   border-radius: 30px;
   box-shadow: 0 7px 10px 0 rgba(0, 0, 0, 0.5);
@@ -295,7 +287,6 @@ button:focus {
 }
 
 /* Animations */
-
 .rotate {
   animation: rotation 3s infinite linear;
 }
@@ -335,7 +326,6 @@ button:focus {
 }
 
 /* Media Queries */
-
 @media screen and (min-width: 1920px) {
   .container-look {
     min-width: 500px;
@@ -387,7 +377,6 @@ button:focus {
 }
 
 /* iPhone X & newer (Safe Area) */
-
 @supports (padding: 0) {
   .post {
     padding-left: max(12px, env(safe-area-inset-left));

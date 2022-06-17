@@ -7,8 +7,12 @@ include("../config.php");
 $data = getLoggedUserData($link);
 $id = $data['id'];
 
-if (isset($_POST["weight"])) {
-    $current_weight = $_REQUEST["weight"];
+function WeightUpdate($link, $id, $current_weight){
     $sql = ("INSERT INTO weight (`weight`,`id`) VALUES ('$current_weight','$id')");
     $actual_weight = mysqli_query($link, $sql);
+}
+
+if (isset($_POST["weight"])) {
+    $current_weight = $_REQUEST["weight"];
+    WeightUpdate($link, $id, $current_weight);
 }

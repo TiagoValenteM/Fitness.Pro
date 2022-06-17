@@ -28,14 +28,13 @@ $count_user = 0;
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="viewport-fit=cover, initial-scale=1.0" />
-    <link rel="icon" type="imagem/png" href="favicon.ico" />
+    <link rel="icon" type="imagem/png" href="../img/favicon.ico" />
       <link rel="stylesheet" href="../global_style.css" />
     <link rel="stylesheet" href="./style.css" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
-      <script src="js/script.js"></script>
     <title>Friends - Fitness.Pro</title>
   </head>
   <body class="background">

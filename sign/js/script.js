@@ -15,7 +15,6 @@ $(document).ready(function () {
     $('#signin').hide()
     document.cookie = 'login_state=2'
   })
-
   $('#old-user').click(function () {
     $('#signup').hide()
     $('#signin').show()

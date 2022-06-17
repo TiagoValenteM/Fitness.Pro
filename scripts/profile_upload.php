@@ -7,7 +7,7 @@ include("../config.php");
 $data = getLoggedUserData($link);
 $id = $data['id'];
 
-// profile photo upload to the databases
+// photo upload to the database
 if (isset($_FILES["upload"])) {
     $stmt = $link->prepare("INSERT INTO `profile_img` (`img_name`, `img_data`,`id`) VALUES (?,?, '$id')");
     $stmt->execute([$_FILES["upload"]["name"], file_get_contents($_FILES["upload"]["tmp_name"])]);

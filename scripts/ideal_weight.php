@@ -7,21 +7,26 @@ include("../config.php");
 $data = getLoggedUserData($link);
 $id = $data['id'];
 
-// getting user's gender
-$selection = mysqli_query($link,"SELECT * FROM users WHERE id='$id'");
-$gender = mysqli_fetch_assoc($selection);
-$gender = $gender['gender'];
-
-// getting user's height
-$selection = mysqli_query($link,"SELECT * FROM users WHERE id='$id'");
-$height = mysqli_fetch_assoc($selection);
-$height = $height['height'];
-
-//formula to calculate ideal weight
-if($gender == "m") {
-    $divide = 4;
-} elseif($gender == "f"){
-    $divide = 2;
-}
+function IdealWeight($height, $gender){
+    if($gender == "m") {
+        $divide = 4;
+    } elseif($gender == "f"){
+        $divide = 2;
+    }
     $ideal_weight= $height-100 -($height-150)/$divide;
-    $ideal_weight = round($ideal_weight,2);
+    return round($ideal_weight,2);
+}
+function GetGender($link, $id){
+    $selection = mysqli_query($link,"SELECT * FROM users WHERE id='$id'");
+    $gender = mysqli_fetch_assoc($selection);
+    return $gender['gender'];
+}
+function GetHeight($link, $id){
+    $selection = mysqli_query($link,"SELECT * FROM users WHERE id='$id'");
+    $height = mysqli_fetch_assoc($selection);
+    return $height['height'];
+}
+
+$gender = GetGender($link, $id);
+$height = GetHeight($link, $id);
+$ideal_weight = IdealWeight($height, $gender);

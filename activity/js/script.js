@@ -25,7 +25,6 @@ $(document).ready(function () {
                         '#c14d82', '#4ef670', '#35f593' ,'#6f94a7', '#8d7999','#8afa1f', '#14f2c0', '#17e0cd',
                         '#dc3676', '#61f757','#3ef586', '#2cf49f', '#43baba', '#7b89a1', '#a9628d'],
                 };
-                const available = "No workouts this month"
                 if(data.getNumberOfRows() == 0){
                     $('#no_workouts').show();
                 }else{

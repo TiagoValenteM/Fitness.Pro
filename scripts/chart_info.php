@@ -23,5 +23,4 @@ function GetMonthWorkouts ($link,$id,$current_month){
     return $month_exercises;
 }
 
-
 echo json_encode(GetMonthWorkouts ($link,$id,$current_month));
