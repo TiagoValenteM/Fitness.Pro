@@ -266,6 +266,14 @@ select:-webkit-autofill:focus {
   -webkit-box-shadow: transparent;
   transition: background-color 5000s;
 }
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type=number] {
+  -moz-appearance: textfield;
+}
 
 /* Container Design */
 .container-look {
