@@ -1,8 +1,22 @@
-# Fitness.Pro 🏃
+# Fitness.Pro 🏃 
+![GitHub](https://img.shields.io/github/v/release/TiagoValenteM/Fitness.Pro) ![GitHub release date](https://img.shields.io/github/release-date/TiagoValenteM/Fitness.Pro) ![GitHub license](https://img.shields.io/github/license/TiagoValenteM/Fitness.Pro) ![GitHub status](https://img.shields.io/uptimerobot/status/m792057315-f95058d2b5100d623d7ff991) ![GitHub stars](https://img.shields.io/github/stars/TiagoValenteM/Fitness.Pro) ![GitHub forks](https://img.shields.io/github/forks/TiagoValenteM/Fitness.Pro)
+<br>
+<br>
 Fitness.Pro is my Health tracker WebApp that records user activity, displays their history, and allows users to interact with one another. It releases  after 2 months of rigorous research and problem-solving. <br>
 At first glance, PHP appeared to be a difficult scripting language, but it proved to be manageable and simple to use in the end. Fitness.Pro user's interface is particularly detailed and adheres to a set of design guidelines, demanding further work on my part to customize things. It's insane to imagine Fitness.Pro as my first-ever Web application right out of the blue.
 
+### Try it yourself! 😄
+Demo: <a href="https://fitnesspro.tvalente.ml/">Fitness.Pro</a>
+
+## UI/UX 📱
+### A containers world
+The Fitness.Pro UI was designed to be pleasing to users while also being useful and responsive. Each feature is contained within a container with rounded corners and transparent backgrounds, and when the information does not fit within the default size, it is scrolled within the container. The user interface was created with the goal of being simple, organized, and human-friendly. Apple's design best practices were a source of inspiration.
+<img src="img/screenshots/app_preview.png">
+
 ## App Structure & Features 🛠️
+<p align="center">
+  <img width="460" src="img/screenshots/structure.png">
+</p>
 
 ### Sign In & Sign Up
 - If the user already has an account, they should Sign In; otherwise, they can Sign Up for free in just a few steps.
@@ -23,12 +37,7 @@ At first glance, PHP appeared to be a difficult scripting language, but it prove
 ### Activity
 - User history is accessible in Activity, which includes prior weight measurements, each workout completed by the user, and a pie chart depicting the sort of activity performed every month by proportion.
 
-## UI/UX 📱
-### A containers world
-The Fitness.Pro UI was designed to be pleasing to users while also being useful and responsive. Each feature is contained within a container with rounded corners and transparent backgrounds, and when the information does not fit within the default size, it is scrolled within the container. The user interface was created with the goal of being simple, organized, and human-friendly. Apple's design best practices were a source of inspiration.
-<img src="img/screenshots/app_preview.png">
-
-## Programming Languages & Methods
+## Programming Languages & Technologies
 
 ### Database 📁
 The database for Fitness.Pro was managed using MySQL. There is a single database with seven tables. The Signed User id was recognized using foreign keys. 'exercises default' is one of the tables that records each exercise's icon, name, kcal per hour, and id.<br>
