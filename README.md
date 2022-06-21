@@ -8,7 +8,7 @@ At first glance, PHP appeared to be a difficult scripting language, but it prove
 - If the user already has an account, they should Sign In; otherwise, they can Sign Up for free in just a few steps.
 
 ### Admin Dashboard
-- Only administrators have access to the Admin Dashboard. Each account has a user type in the database that can only be changed in the db; the default when signing up is a regular` type user. 
+- Only administrators have access to the Admin Dashboard. Each account has a user type in the database that can only be changed in the db; the default when signing up is a `regular` type user. 
 - The Administrator Dashboard is the webpage where you may update existing exercises and add new ones. The admin account in the Fitness.Pro database has the username admin and the password admin by default. It is possible to add more administrators in the future.
 
 ### Home
