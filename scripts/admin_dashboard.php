@@ -28,14 +28,17 @@ if (isset($_POST["new_workout"])) {
     $exercise_type = $_REQUEST["exercise_type"];
     $kcal_hour = $_REQUEST["kcal_hour"];
     NewWorkout($link, $exercise_type, $kcal_hour);
+    header("Refresh:0");
 }
 
 if (isset($_POST["delete"]) && isset($_COOKIE['exercise_id']))  {
     DeleteWorkout ($link, $exercise_id);
+    header("Refresh:0");
 }
 
 if (isset($_POST["modify"]) && isset($_COOKIE['exercise_id'])) {
     $exercise_type = $_REQUEST["exercise_type"];
     $kcal_hour = $_REQUEST["kcal_hour"];
     ModifyWorkoutWithPhoto($link, $exercise_type, $kcal_hour, $exercise_id);
+    header("Refresh:0");
 }

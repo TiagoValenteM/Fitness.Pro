@@ -30,7 +30,6 @@ $counter = 0;
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="js/script.js"></script>
     <title>Profile - Fitness.Pro</title>
 </head>
 <body class="background">
@@ -137,7 +136,11 @@ $counter = 0;
                     <div class="margin-profile justify-end column-form" id="actual_exercise">
                         <input type="text" name="exercise_type" class="input-field margin-profile" placeholder="Exercise Type" required>
                         <input type="text" name="kcal_hour" class="input-field margin-profile" placeholder="Kcal per Hour" required>
-                        <input type="file" name="img_data" id="img_data" class="margin-profile white" accept=".png,.gif,.jpg,.webp" required>
+                        <label for="file-update" class="file-upload-button">
+                            <span class="bold-paragraph-box margin-profile-side">Browse for a file</span>
+                            <img src="../img/icons/search.svg" class="margin-profile-side">
+                        </label>
+                        <input class="padding-bottom width-center" id="file-update" type="file" name="img_data" accept=".png,.gif,.jpg,.webp" required>
                         <div class="flex-row justify-end">
                             <button
                                     type="button"
@@ -177,7 +180,11 @@ $counter = 0;
                     <div class="margin-profile justify-end column-form" id="actual_exercise">
                         <input type="text" name="exercise_type" class="input-field margin-profile" placeholder="Exercise Type" required>
                         <input type="text" name="kcal_hour" class="input-field margin-profile" placeholder="kcal per Hour" required>
-                        <input type="file" name="img_data" class="margin-profile white" accept=".png,.gif,.jpg,.webp" required>
+                        <label for="file-upload" class="file-upload-button">
+                            <span class="bold-paragraph-box margin-profile-side">Browse for a file</span>
+                            <img src="../img/icons/search.svg" class="margin-profile-side">
+                        </label>
+                        <input class="padding-bottom width-center" id="file-upload" type="file" name="img_data" accept=".png,.gif,.jpg,.webp" required>
                         <div class="flex-row justify-end">
                             <input type="submit" name="new_workout" class="button-blue bold-paragraph-box" value="New Workout">
                         </div>
@@ -194,5 +201,6 @@ $counter = 0;
     </div>
 </footer>
 </body>
+<script src="js/script.js"></script>
 </html>
 

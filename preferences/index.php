@@ -32,7 +32,6 @@ if ($data['user_type'] == 'admin') {
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" ></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
-        <script src="js/script.js"></script>
         <title>Preferences - Fitness.Pro</title>
     </head>
     <body class="background">
@@ -67,9 +66,16 @@ if ($data['user_type'] == 'admin') {
             <div>
                 <h2 class="center title-box green margin-top-bottom margin-heading-container">Profile Photo</h2>
             </div>
-            <div class="margin-profile padding-50">
+            <div class="center padding-top-content">
+                <div class="bold-paragraph-box white margin-activity center-text" id="file_name">
+                    <span class="bold-paragraph-box white">No file selected</span>
+                </div>
                 <form class="center white" method="post" enctype="multipart/form-data">
-                    <input class="padding-bottom width-center" type="file" name="upload" accept=".png,.gif,.jpg,.webp" required>
+                    <label for="file-upload" class="file-upload-button">
+                        <span class="bold-paragraph-box margin-profile-side">Browse for a file</span>
+                        <img src="../img/icons/search.svg" class="margin-profile-side">
+                    </label>
+                    <input class="padding-bottom width-center" id="file-upload" type="file" name="upload" accept=".png,.gif,.jpg,.webp" required>
                     <input class="button-blue bold-paragraph-box margin-top-bottom" type="submit" name="submit" value="Upload">
                 </form>
             </div>
@@ -106,4 +112,5 @@ if ($data['user_type'] == 'admin') {
         </div>
     </footer>
     </body>
+    <script src="./js/script.js"></script>
 </html>

@@ -4,7 +4,7 @@
 require_once '../session.php';
 // connects to the database 'fitnesspro'
 include("../config.php");
-include("friends_helper.php");
+include("home_functions.php");
 $data = getLoggedUserData($link);
 $id = $data['id'];
 
