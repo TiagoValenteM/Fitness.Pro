@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Jun 16, 2022 at 11:14 PM
+-- Generation Time: Jun 21, 2022 at 04:00 AM
 -- Server version: 10.4.21-MariaDB
 -- PHP Version: 8.1.4
 
@@ -38,10 +38,7 @@ CREATE TABLE `friends_follow` (
 --
 
 INSERT INTO `friends_follow` (`follow_id`, `follower_id`, `followed_user_id`) VALUES
-(1, 1, 3),
-(2, 1, 7),
 (3, 3, 2),
-(35, 1, 15),
 (43, 31, 2),
 (44, 31, 3),
 (45, 31, 7),
@@ -55,7 +52,6 @@ INSERT INTO `friends_follow` (`follow_id`, `follower_id`, `followed_user_id`) VA
 (54, 7, 25),
 (56, 32, 2),
 (57, 32, 7),
-(58, 1, 32),
 (59, 8, 2),
 (60, 8, 3),
 (61, 8, 7),

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Jun 16, 2022 at 11:14 PM
+-- Generation Time: Jun 21, 2022 at 04:00 AM
 -- Server version: 10.4.21-MariaDB
 -- PHP Version: 8.1.4
 
@@ -45,17 +45,12 @@ INSERT INTO `friends_post` (`post_id`, `user_id`, `content`, `created`, `created
 (2, 2, 'Mais um treino? Estás rijo!', '2022-05-31 00:23:14', 2, 4),
 (5, 3, 'És grande irmão.', '2022-05-31 00:28:07', 2, 1),
 (10, 7, 'Sua preguiçosa!\r\n', '2022-05-31 11:07:19', 2, 7),
-(11, 15, 'Grande Bruno! Já fizeste Cycling hoje?', '2022-06-01 12:29:45', 2, 0),
 (13, 25, 'Oi Núria! Tas boa?\r\n', '2022-06-01 16:11:01', 3, 0),
 (15, 26, 'Hey! Soube que partiste uma perna, estás bem?', '2022-06-03 21:16:03', 2, 2),
 (17, 8, 'Como estás Filipinha? Não te vejo há anos...', '2022-06-04 10:47:37', 31, 10),
 (21, 7, 'Oioi Osmainy, faz tempo que não te vejo lá na quinta! Beijocas ;D', '2022-06-04 15:36:52', 31, 3),
 (23, 25, 'Olá!! Como vai isso?', '2022-06-04 16:34:38', 7, 0),
-(24, 7, 'Salut Paulito :D Tenho estado na Alemanha a trabalhar!', '2022-06-04 16:35:54', 7, 3),
-(26, 25, 'Núria... Odeio-te tanto mas tanto! :*', '2022-06-04 18:49:01', 2, 3),
-(27, 2, 'Filho, vais às compras por mim?', '2022-06-08 23:02:13', 32, 2),
-(28, 2, 'Hallo, vou sim!!', '2022-06-08 23:03:07', 2, 23),
-(30, 32, 'Olá Sandra, que tal???', '2022-06-13 12:08:44', 8, 1),
+(24, 7, 'Salut Paulito :D Tenho estado na Alemanha a trabalhar!', '2022-06-04 16:35:54', 7, 4),
 (31, 7, 'Boa tarde, tudo bem?', '2022-06-16 17:44:01', 2, 1);
 
 --
@@ -78,7 +73,7 @@ ALTER TABLE `friends_post`
 -- AUTO_INCREMENT for table `friends_post`
 --
 ALTER TABLE `friends_post`
-  MODIFY `post_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
+  MODIFY `post_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
 
 --
 -- Constraints for dumped tables

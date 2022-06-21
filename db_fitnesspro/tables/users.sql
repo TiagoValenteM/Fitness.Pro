@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Jun 16, 2022 at 11:14 PM
+-- Generation Time: Jun 21, 2022 at 04:01 AM
 -- Server version: 10.4.21-MariaDB
 -- PHP Version: 8.1.4
 
@@ -51,12 +51,9 @@ INSERT INTO `users` (`id`, `name`, `email`, `password`, `user`, `gender`, `initi
 (3, 'Daniel Lopes', 'daniel.ramos.lopes@hotmail.com', 'e5dc74ac9a1deac059d93981178144c3', 'danlopes', 'm', 75, 179, 600, '2022-05-18 11:58:00', 'user'),
 (7, 'Osmainy Raimundo', 'osmainy@gmail.com', 'e5dc74ac9a1deac059d93981178144c3', 'osmainy.raimundo', 'f', 50, 174, 600, '2022-05-18 11:58:00', 'user'),
 (8, 'Filipa Marques', 'flipinhamarques@hotmail.com', '2fe04e524ba40505a82e03a2819429cc', 'filipamarques', 'f', 11, 11, 600, '2022-05-18 11:58:00', 'user'),
-(15, 'Bruno Nogueira', 'bruno.nogueira@outlook.pt', 'e5dc74ac9a1deac059d93981178144c3', 'brnogu', 'm', 53, 170, 600, '2022-05-18 11:58:00', 'user'),
 (25, 'Núria Fernandes', 'nuria@gmail.com', 'e5dc74ac9a1deac059d93981178144c3', 'nuriafernandes', 'f', 67, 89, 600, '2022-05-18 11:58:00', 'user'),
 (26, 'João Marco', 'joaomarco@gmail.com', 'e5dc74ac9a1deac059d93981178144c3', 'joaomarco', 'm', 56, 125, 600, '2022-05-18 12:06:50', 'user'),
 (31, 'Paulo Antunes', 'paulito@gmail.com', 'e5dc74ac9a1deac059d93981178144c3', 'paulito', 'm', 27, 146, 600, '2022-05-24 01:08:46', 'user'),
-(32, 'Sandra Milheiro', 'sandramilheiro@gmail.com', 'e5dc74ac9a1deac059d93981178144c3', 'sandramilheiro', 'f', 94, 173, 600, '2022-06-08 22:59:00', 'user'),
-(106, 'Ana Lourenço', 'ritalourenco@gmail.com', 'e5dc74ac9a1deac059d93981178144c3', 'ritalourencoo', 'f', 57, 164, 600, '2022-06-16 04:00:58', 'user'),
 (107, 'Rafael Lopes', 'rafaellopes@gmail.com', 'e5dc74ac9a1deac059d93981178144c3', 'rafaellopes', 'm', 89, 194, 600, '2022-06-16 04:02:38', 'user');
 
 --
@@ -80,7 +77,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=110;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=111;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
