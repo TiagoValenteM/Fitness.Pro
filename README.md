@@ -1,5 +1,5 @@
 # Fitness.Pro 🏃 
-![GitHub](https://img.shields.io/github/v/release/TiagoValenteM/Fitness.Pro) ![GitHub release date](https://img.shields.io/github/release-date/TiagoValenteM/Fitness.Pro) ![GitHub license](https://img.shields.io/github/license/TiagoValenteM/Fitness.Pro) ![GitHub status](https://img.shields.io/uptimerobot/status/m792057315-f95058d2b5100d623d7ff991) ![GitHub stars](https://img.shields.io/github/stars/TiagoValenteM/Fitness.Pro) ![GitHub forks](https://img.shields.io/github/forks/TiagoValenteM/Fitness.Pro)
+![GitHub](https://img.shields.io/github/v/release/TiagoValenteM/Fitness.Pro) ![GitHub release date](https://img.shields.io/github/release-date/TiagoValenteM/Fitness.Pro) ![GitHub](https://img.shields.io/github/license/TiagoValenteM/Fitness.Pro) ![GitHub status](https://img.shields.io/uptimerobot/status/m792057315-f95058d2b5100d623d7ff991) ![GitHub stars](https://img.shields.io/github/stars/TiagoValenteM/Fitness.Pro) ![GitHub forks](https://img.shields.io/github/forks/TiagoValenteM/Fitness.Pro)
 <br>
 <br>
 Fitness.Pro is my Health tracker WebApp that records user activity, displays their history, and allows users to interact with one another. It releases  after 2 months of rigorous research and problem-solving. <br>
